@@ -1,0 +1,47 @@
+set nocompatible
+
+call pathogen#infect()    " Start pathogen plugin
+call pathogen#helptags()  " command-t needs it
+syntax enable             " enables syntax hilighting
+filetype plugin indent on " Recognize filetype
+set t_Co=256              " for zenburn
+colorscheme zenburn 
+
+"Interface
+set number                   " line numbers
+set showtabline=2            " Always show tabline
+set splitright               " vs splits new window to east
+set splitbelow               " split splits new window to south
+set showmatch                " Show matching bracets when text indicator is over them
+set nowrap                   " turn off line wrapping
+set ruler                    " linenum, colnum displayes
+set cursorline               " shows current line highlighted
+set showcmd                  " Show incompletecommand
+set showmode                 " Show mode i'm in
+set wildmenu                 " status line for vim
+set wildmode=list:longest    " Complete files like a shell.
+set hidden                   " Handle multiple buffers better.
+set scrolloff=3              " Show 3 lines of context around the cursor.
+
+"Movement
+set backspace=indent,eol,start " Intuitive backspacing.
+
+" Searching
+set ignorecase   " Ignore case when searching
+set smartcase    " Igore case when lowercase is given
+set hlsearch     " Highlight search things
+set incsearch    " Make search act like search in modern browsers
+
+"Indenting
+set smartindent   " smart indent when inserting new line
+set autoindent    " copy indent from above line
+
+"Tabs
+set smarttab        " activate smart tabs
+set expandtab       " insert space characters whenever the tab key is pressed
+set tabstop=4       " control the number of space characters that will be inserted when the tab key is pressed
+set shiftwidth=4    " change the number of space characters inserted for indentation
+
+let mapleader=","
+let g:mapleader=','
+let g:maplocalleader=','

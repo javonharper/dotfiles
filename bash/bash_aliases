@@ -1,0 +1,38 @@
+if [ -x /usr/bin/dircolors ]; then
+    eval "`dircolors -b`"
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias mkdir='mkdir -p'
+alias cp='cp -r'
+alias rm='rm -r'
+
+alias c='clear'
+alias q='exit'
+alias py='python'
+alias rb='ruby'
+
+alias cmx='chmod +x'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+alias wrapitup='sudo shutdown -P +30'
+alias svnadd='svn st | grep "?" | awk "{print $2}" | xargs svn add $1'
+alias web-crawl='ssh joshua@crawl.akrasiac.org' #pass: joshua
+alias pyserver='cd $HOME && python -m SimpleHTTPServer'
+alias chromium-browser='chromium-browser -allow-file-access-from-files'
+alias top='htop'
+
+mkcd() { mkdir -p "$1" && cd "$1"; }
+cdl() { cd "$1" && ls; }
+srch() { grep -r $1 .; }
