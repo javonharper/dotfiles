@@ -2,29 +2,30 @@ set nocompatible
 
 call pathogen#infect()    " Start pathogen plugin
 call pathogen#helptags()  " command-t needs it
-syntax enable             " enables syntax hilighting
+syntax enable             " enables syntax highlighting
 filetype plugin indent on " Recognize filetype
 set t_Co=256              " for zenburn
-set background=light
 colorscheme zenburn 
 
 "Interface
 set number                   " line numbers
 set showtabline=2            " Always show tabline
 set splitright               " vs splits new window to east
-set splitbelow               " split splits new window to south
 set showmatch                " Show matching bracets when text indicator is over them
 set nowrap                   " turn off line wrapping
 set ruler                    " linenum, colnum displayes
 set cursorline               " shows current line highlighted
 set showcmd                  " Show incompletecommand
 set showmode                 " Show mode i'm in
-set wildmenu                 " status line for vim
-set wildmode=list:longest    " Complete files like a shell.
 set hidden                   " Handle multiple buffers better.
 set scrolloff=3              " Show 3 lines of context around the cursor.
 
-"Movement
+" Bash-like completion
+set wildmenu                 " status line for vim
+set wildmode=list:longest    " Complete files like a shell.
+set wildignore=*.o,*.jar,*.class,*.png,*.gif
+
+" Movement
 set backspace=indent,eol,start " Intuitive backspacing.
 
 " Searching
@@ -33,11 +34,11 @@ set smartcase    " Igore case when lowercase is given
 set hlsearch     " Highlight search things
 set incsearch    " Make search act like search in modern browsers
 
-"Indenting
+" Indenting Style
 set smartindent   " smart indent when inserting new line
 set autoindent    " copy indent from above line
 
-"Tabs
+" Tab Style
 set smarttab        " activate smart tabs
 set expandtab       " insert space characters whenever the tab key is pressed
 set tabstop=2       " control the number of space characters that will be inserted when the tab key is pressed
@@ -48,13 +49,25 @@ let mapleader=","
 let g:mapleader=','
 let g:maplocalleader=','
 
-"Handle other filetypes
-autocmd BufNewFile,BufRead *.less             set ft=less.css
+" Leader keybindings
+map <leader>c :TComment<CR>
+
+" Other bindings
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+nmap <C-h> :bp<CR>
+nmap <C-l> :bn<CR>
+vmap <C-d> :bw<CR>
+nmap <C-d> :bw<CR>
+nmap <F2>  :NERDTreeToggle<CR>
+nmap <F3>  :TagbarToggle<CR>
 
 
-"Plugin-style functionality
+" Handle other filetypes
+autocmd BufNewFile,BufRead *.less set ft=css
 
-"Saves session on quit, tries to open it on load (per directory)
+" Plugin-style functionality
+" Saves session on quit, tries to open it on load (per directory)
 function! MakeSession()
   let b:sessiondir = $HOME . "/.vim/sessions" . getcwd()
   if (filewritable(b:sessiondir) != 2)
@@ -76,4 +89,5 @@ function! LoadSession()
 endfunction
 au VimEnter * nested :call LoadSession()
 au VimLeave * :call MakeSession()
+" End session saver
 
