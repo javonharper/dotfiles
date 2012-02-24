@@ -43,6 +43,7 @@ set expandtab       " insert space characters whenever the tab key is pressed
 set tabstop=2       " control the number of space characters that will be inserted when the tab key is pressed
 set shiftwidth=2    " change the number of space characters inserted for indentation
 
+" Re map leader
 let mapleader=","
 let g:mapleader=','
 let g:maplocalleader=','
