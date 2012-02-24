@@ -5,6 +5,7 @@ call pathogen#helptags()  " command-t needs it
 syntax enable             " enables syntax hilighting
 filetype plugin indent on " Recognize filetype
 set t_Co=256              " for zenburn
+set background=light
 colorscheme zenburn 
 
 "Interface
@@ -39,9 +40,12 @@ set autoindent    " copy indent from above line
 "Tabs
 set smarttab        " activate smart tabs
 set expandtab       " insert space characters whenever the tab key is pressed
-set tabstop=4       " control the number of space characters that will be inserted when the tab key is pressed
-set shiftwidth=4    " change the number of space characters inserted for indentation
+set tabstop=2       " control the number of space characters that will be inserted when the tab key is pressed
+set shiftwidth=2    " change the number of space characters inserted for indentation
 
 let mapleader=","
 let g:mapleader=','
 let g:maplocalleader=','
+
+"Handle other filetypes
+autocmd BufNewFile,BufRead *.less             set ft=less.css
