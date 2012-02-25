@@ -70,3 +70,7 @@
 	path = vim/vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
 	 ignore = untracked
+[submodule "vim/vim/bundle/vimwiki"]
+	path = vim/vim/bundle/vimwiki
+	url = https://github.com/vim-scripts/vimwiki.git
+	 ignore = untracked
