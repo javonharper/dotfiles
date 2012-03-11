@@ -9,7 +9,6 @@ colorscheme zenburn
 
 "Interface
 set number                   " line numbers
-set showtabline=2            " Always show tabline
 set splitright               " vs splits new window to east
 set showmatch                " Show matching bracets when text indicator is over them
 set nowrap                   " turn off line wrapping
