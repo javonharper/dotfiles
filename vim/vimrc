@@ -22,8 +22,8 @@ set scrolloff=3              " Show 3 lines of context around the cursor.
 " Bash-like completion
 set wildmenu                 " status line for vim
 set wildmode=list:longest    " Complete files like a shell.
-set wildignore+=*.a, *.o, *.class
-set wildignore+=*.jar, *.zip
+set wildignore+=*.a,*.o,*.class
+set wildignore+=*.jar,*.zip
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
 set wildignore+=.DS_Store,.git,.hg,.svn
 set wildignore+=*~,*.swp,*.tmp
