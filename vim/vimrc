@@ -22,7 +22,11 @@ set scrolloff=3              " Show 3 lines of context around the cursor.
 " Bash-like completion
 set wildmenu                 " status line for vim
 set wildmode=list:longest    " Complete files like a shell.
-set wildignore=*.o,*.jar,*.class,*.png,*.gif
+set wildignore+=*.a, *.o, *.class
+set wildignore+=*.jar, *.zip
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+set wildignore+=.DS_Store,.git,.hg,.svn
+set wildignore+=*~,*.swp,*.tmp
 
 " Movement
 set backspace=indent,eol,start " Intuitive backspacing.
@@ -48,20 +52,17 @@ let mapleader=","
 let g:mapleader=','
 let g:maplocalleader=','
 
-" Leader keybindings
-map <leader>c :TComment<CR>
-
 " Other bindings
-nnoremap <C-e> 3<C-e>
-nnoremap <C-y> 3<C-y>
+nnoremap <C-e> 5<C-e>
+nnoremap <C-y> 5<C-y>
 nmap <C-h> :bp<CR>
 nmap <C-l> :bn<CR>
 vmap <C-d> :bw<CR>
 nmap <C-d> :bw<CR>
+    
 nmap <F2>  :NERDTreeToggle<CR>
 nmap <F3>  :TagbarToggle<CR>
 
 
 " Handle other filetypes
 autocmd BufNewFile,BufRead *.less set ft=css
-
