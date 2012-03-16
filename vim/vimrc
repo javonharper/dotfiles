@@ -62,10 +62,16 @@ nnoremap <C-e> 5<C-e>
 nnoremap <C-y> 5<C-y>
 
 " Better buffer cycling
-nmap <C-h> :bp<CR>
-nmap <C-l> :bn<CR>
+nmap <C-p> :bp<CR>
+nmap <C-n> :bn<CR>
 vmap <C-d> :bw<CR>
 nmap <C-d> :bw<CR>
+
+"Better screen movement
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
 
 " Quick save
 noremap <Leader>s :w<CR>
