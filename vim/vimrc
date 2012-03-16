@@ -2,31 +2,34 @@ set nocompatible
 
 call pathogen#infect()    " Start pathogen plugin
 call pathogen#helptags()  " command-t needs it
+
 syntax enable             " enables syntax highlighting 
 filetype plugin indent on " Recognize filetype
-set t_Co=256              " for zenburn
+set t_Co=256              " for colorschemes:
 colorscheme zenburn 
 
-"Interface
+" Interface
 set number                   " line numbers
-set splitright               " vs splits new window to east
-set showmatch                " Show matching bracets when text indicator is over them
 set nowrap                   " turn off line wrapping
 set ruler                    " linenum, colnum displayes
 set cursorline               " shows current line highlighted
 set showcmd                  " Show incompletecommand
 set showmode                 " Show mode i'm in
+set showmatch                " Show matching bracets when text indicator is over them
+
+" Buffer management
 set hidden                   " Handle multiple buffers better.
+set splitright               " vs splits new window to east
 set scrolloff=3              " Show 3 lines of context around the cursor.
 
 " Bash-like completion
 set wildmenu                 " status line for vim
 set wildmode=list:longest    " Complete files like a shell.
-set wildignore+=*.a,*.o,*.class
+set wildignore+=*.a,*.o,*.class,*.pyc
 set wildignore+=*.jar,*.zip
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
 set wildignore+=.DS_Store,.git,.hg,.svn
-set wildignore+=*~,*.swp,*.tmp
+set wildignore+=*~,*.swp,*.tmp,*.bak
 
 " Movement
 set backspace=indent,eol,start " Intuitive backspacing.
@@ -52,8 +55,12 @@ let mapleader=","
 let g:mapleader=','
 let g:maplocalleader=','
 
-" Personal bindings
-" TComment & leader
+""" Personal bindings """
+
+" use colon instead of semi-colon for vim commands
+nnoremap ; :
+
+" Bind TComment to leader shortcut
 nmap <Leader>c :TComment<CR>
 vmap <Leader>c :TComment<CR>
 
@@ -64,7 +71,6 @@ nnoremap <C-y> 5<C-y>
 " Better buffer cycling
 nmap <C-p> :bp<CR>
 nmap <C-n> :bn<CR>
-vmap <C-d> :bw<CR>
 nmap <C-d> :bw<CR>
 
 "Better screen movement

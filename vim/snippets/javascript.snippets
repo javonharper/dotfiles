@@ -1,0 +1,44 @@
+snippet prov
+	goog.provide('${1}');
+snippet req
+	goog.reqire('${1}');
+	
+snippet f
+	function(${1: arguments}) {
+		${2://body}
+	}
+snippet fun
+	function ${1:function_name} (${2: arguments}) {
+		${3://body}
+	}
+snippet :f
+	${1:method_name}: ${2:method_name}(${3:arguments}){
+		${4://body}
+	}
+snippet model
+	models.${1:MyModel} = Backbone.Model.extend({
+		${2}
+	});
+snippet view
+	views.${1:MyView} = Backbone.View.extend({
+		${2}
+	});
+snippet controller
+	controllers.${1:MyController} = Backbone.Router.extend({
+		${2}
+	});
+snippet anon
+	(function() {
+		${1}
+	})();
+snippet clog
+	console.log(${1: JAVON: Here I Am});
+snippet if
+	if (${1}) {
+		${2}
+	}
+snippet wh
+	while (${1}) {
+		${2}
+	}
+	
