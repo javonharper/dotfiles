@@ -33,6 +33,14 @@ alias pyserver='cd $HOME && python -m SimpleHTTPServer'
 alias chromium-browser='chromium-browser -allow-file-access-from-files'
 alias top='htop'
 
+alias hp='hg push'
+alias hu='hg pull --rebaseif'
+alias hs='hg status'
+alias hd='hg diff | vim -'
+alias hp='hg push'
+alias hl='hg log -G -l5'
+
+
 mkcd() { mkdir -p "$1" && cd "$1"; }
 cdl() { cd "$1" && ls; }
 srch() { grep -r $1 .; }
