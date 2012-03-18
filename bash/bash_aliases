@@ -33,6 +33,7 @@ alias pyserver='cd $HOME && python -m SimpleHTTPServer'
 alias chromium-browser='chromium-browser -allow-file-access-from-files'
 alias top='htop'
 
+# Mercurial Aliases
 alias hp='hg push'
 alias hu='hg pull --rebaseif'
 alias hs='hg status'
@@ -40,6 +41,14 @@ alias hd='hg diff | vim -'
 alias hp='hg push'
 alias hl='hg log -G -l5'
 
+# Git Aliases
+alias cdroot='cd $(git rev-parse --show-toplevel)'
+alias gp='git push'
+alias gu='git pull'
+alias gs='git status'
+alias gd='git diff | vim -'
+alias gl='git log -l 5'
+alias ga='git add .'
 
 mkcd() { mkdir -p "$1" && cd "$1"; }
 cdl() { cd "$1" && ls; }

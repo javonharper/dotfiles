@@ -6,7 +6,8 @@ call pathogen#helptags()  " command-t needs it
 syntax enable             " enables syntax highlighting 
 filetype plugin indent on " Recognize filetype
 set t_Co=256              " for colorschemes:
-colorscheme zenburn 
+set background=dark
+colorscheme zenburn
 
 " Interface
 set number                   " line numbers
@@ -57,7 +58,7 @@ let g:maplocalleader=','
 
 """ Personal bindings """
 
-" use colon instead of semi-colon for vim commands
+" use semi-colon instead of colon for vim commands
 nnoremap ; :
 
 " Bind TComment to leader shortcut
