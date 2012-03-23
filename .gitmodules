@@ -81,3 +81,4 @@
 [submodule "vim/vim/bundle/vim-web-indent"]
 	path = vim/vim/bundle/vim-web-indent
 	url = https://github.com/lukaszb/vim-web-indent.git
+    ignore = untracked
