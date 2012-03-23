@@ -49,7 +49,7 @@ alias gp='git push'
 alias gu='git pull'
 alias gs='git status'
 alias gd='git diff | vim -'
-alias gl='git log -l 10 --pretty=format:'%h : %s' --graph'
+alias gl='git log -l 10'
 alias ga='git add .'
 
 mkcd() { mkdir -p "$1" && cd "$1"; }
