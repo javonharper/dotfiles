@@ -11,20 +11,20 @@ snippet fun
 		${3://body}
 	}
 snippet :f
-	${1: method_name }: ${2: method_name }(${3: arguments }){
+	${1: method_name }: function(${3: arguments }) {
 		${4: //body }
 	}${5: , }
 snippet model
-	models.${1:MyModel} = Backbone.Model.extend({
-		${2://body}
+	models.${1:MyModel} = ${2:Backbone.Model}.extend({
+		${3://body}
 	});
 snippet view
-	views.${1:MyView} = Backbone.View.extend({
-		${2://body}
+	views.${1:MyView} = ${2:Backbone.View}.extend({
+		${3://body}
 	});
 snippet controller
-	controllers.${1:MyController} = Backbone.Router.extend({
-		${2://body}
+	controllers.${1:MyController} = ${2:Backbone.Router}.extend({
+		${3://body}
 	});
 snippet anon
 	(function() {
