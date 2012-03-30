@@ -89,6 +89,9 @@ imap <F2> <Esc>:w<CR>
 nmap <Leader>q :q!<CR>
 nmap <Leader>bd :bd!<CR>
 
+" Select All
+map <C-a> ggVG
+
 " Helper Views
 nmap <F5>  :NERDTreeToggle<CR>
 nmap <F6>  :TagbarToggle<CR>
