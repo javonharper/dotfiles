@@ -91,3 +91,4 @@ nmap <F6>  :TagbarToggle<CR>
 
 " Handle other filetypes
 autocmd BufNewFile,BufRead *.less set ft=css
+autocmd BufNewFile,BufRead *.json set ft=javascript
