@@ -21,19 +21,19 @@ set showmatch                " Show matching bracets when text indicator is over
 " Buffer management
 set hidden                   " Handle multiple buffers better.
 set splitright               " vs splits new window to east
-set scrolloff=3              " Show 3 lines of context around the cursor.
 
 " Bash-like completion
-set wildmenu                 " status line for vim
-set wildmode=list:longest    " Complete files like a shell.
-set wildignore+=*.a,*.o,*.class,*.pyc
-set wildignore+=*.jar,*.zip
-set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
-set wildignore+=.DS_Store,.git,.hg,.svn
-set wildignore+=*~,*.swp,*.tmp,*.bak
+set wildmenu                                    " status line for vim
+set wildmode=list:longest                       " Complete files like a shell.
+set wildignore+=*.a,*.o,*.class,*.pyc           "Ignore compiled files
+set wildignore+=*.jar,*.zip                     "Ignore compressed files
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png   "Ignore image files
+set wildignore+=.DS_Store,.git,.hg,.svn         "Ignore hidden files and folders
+set wildignore+=*~,*.swp,*.tmp,*.bak            "Ignore backup files
 
 " Movement
 set backspace=indent,eol,start " Intuitive backspacing.
+set scrolloff=5              " Show 3 lines of context around the cursor.
 
 " Searching
 set ignorecase   " Ignore case when searching
@@ -84,6 +84,10 @@ nmap <C-l> <C-w>l
 noremap <Leader>s :w<CR>
 nmap <F2> :w<CR>
 imap <F2> <Esc>:w<CR>
+
+" Easier exiting
+nmap <Leader>q :q!<CR>
+nmap <Leader>bd :bd!<CR>
 
 " Helper Views
 nmap <F5>  :NERDTreeToggle<CR>
