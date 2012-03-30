@@ -30,10 +30,11 @@ alias ......='cd ../../../../..'
 
 alias wrapitup='sudo shutdown -P +30'
 alias svnadd='svn st | grep "?" | awk "{print $2}" | xargs svn add $1'
-alias web-crawl='ssh joshua@crawl.akrasiac.org' #pass: joshua
+alias dcss='ssh joshua@crawl.akrasiac.org' #pass: joshua
 alias pyserver='python -m SimpleHTTPServer'
 alias chromium-browser='chromium-browser -allow-file-access-from-files'
 alias top='htop'
+alias ack='ack-grep'
 
 # Mercurial Aliases
 alias hp='hg push'
@@ -49,9 +50,8 @@ alias gp='git push'
 alias gu='git pull'
 alias gs='git status'
 alias gd='git diff | vim -'
-alias gl='git log -l 10'
+alias gl='git log -l 5'
 alias ga='git add .'
 
 mkcd() { mkdir -p "$1" && cd "$1"; }
 cdl() { cd "$1" && ls; }
-srch() { grep -r $1 .; }
