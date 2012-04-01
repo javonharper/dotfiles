@@ -65,10 +65,6 @@ nnoremap ; :
 nmap <Leader>c :TComment<CR>
 vmap <Leader>c :TComment<CR>
 
-" Move 5 lines at a time
-nnoremap <C-e> 5<C-e>
-nnoremap <C-y> 5<C-y>
-
 " Better buffer cycling
 nmap <C-p> :bp<CR>
 nmap <C-n> :bn<CR>
@@ -92,9 +88,23 @@ nmap <Leader>bd :bd!<CR>
 " Select All
 map <C-a> ggVG
 
+" yank from current to eol, like C and D
+nnoremap Y y$
+
+"clear search
+nmap <silent> <leader>/ :nohl>CR>
+
+
 " Helper Views
 nmap <F5>  :NERDTreeToggle<CR>
 nmap <F6>  :TagbarToggle<CR>
+
+" stay in visual mode when shifting
+vnoremap < <gv
+vnoremap > >gv 
+
+" When forgetting to sudo
+cmap w!! w !sudo tee % >/dev/null
 
 " Handle other filetypes
 autocmd BufNewFile,BufRead *.less set ft=css
