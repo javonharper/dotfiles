@@ -43,6 +43,8 @@ alias hs='hg status'
 alias hd='hg diff | vim -'
 alias hp='hg push'
 alias hl='hg log -G -l5'
+alias ho='hg out'
+alias hi='hg in'
 
 # Git Aliases
 alias cdroot='cd $(git rev-parse --show-toplevel)'
