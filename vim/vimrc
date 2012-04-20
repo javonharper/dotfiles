@@ -88,9 +88,6 @@ nmap <F2> :w<CR>
 imap <F2> <Esc>:w<CR>
 vmap <F2> <Esc>:w<CR>
 
-" Easier exiting
-nmap <C-q> :q!<CR>
-
 " Select All
 map <C-a> ggVG
 
@@ -98,7 +95,7 @@ map <C-a> ggVG
 nnoremap Y y$
 
 "clear search
-nmap <silent> <leader>/ :nohl>CR>
+nmap <silent> <leader>. :nohl<CR>
 
 " stay in visual mode when shifting
 vnoremap < <gv
@@ -106,6 +103,11 @@ vnoremap > >gv
 
 " When forgetting to sudo
 cmap w!! w !sudo tee % >/dev/null
+
+" Zencoding
+imap <C-e> <C-y>,
+imap <C-z> <C-y>N
+imap <C-x> <C-y>n
 
 " Helper Views
 nmap <F5>  :NERDTreeToggle<CR>
