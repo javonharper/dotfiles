@@ -39,8 +39,8 @@ set wildignore+=.DS_Store,.git,.hg,.svn         "Ignore hidden files and folders
 set wildignore+=*~,*.swp,*.tmp,*.bak            "Ignore backup files
 
 " Movement
-set backspace=indent,eol,start " Intuitive backspacing.
-set scrolloff=5              " Show 3 lines of context around the cursor.
+set backspace=indent,eol,start  " Intuitive backspacing.
+set scrolloff=10                " Show 10 lines of context around the cursor.
 
 " Searching
 set ignorecase   " Ignore case when searching
@@ -64,54 +64,47 @@ let g:mapleader=','
 let g:maplocalleader=','
 
 """ Personal bindings
-
-" use semi-colon instead of colon for vim commands
+" Remapping Symbols
 nnoremap ; :
+vnoremap < <gv
+vnoremap > >gv 
 
-" Bind TComment to leader shortcut
-nmap <Leader>c :TComment<CR>
-vmap <Leader>c :TComment<CR>
+" Remapping ShiftKeys
+noremap U :redo<CR>
+noremap Q :qa!<CR>
+noremap W :wa!<CR>
+noremap H :nohl<CR>
+noremap Y y$
 
-" Better buffer cycling
+""" Mapping CtrlKeys
 nmap <C-p> :bp<CR>
 nmap <C-n> :bn<CR>
 nmap <C-d> :bw<CR>
 
-"Better screen movement
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-" Quick save
-nmap <F2> :w<CR>
-imap <F2> <Esc>:w<CR>
-vmap <F2> <Esc>:w<CR>
-
-" Select All
 map <C-a> ggVG
 
-" yank from current to eol, like C and D
-nnoremap Y y$
-
-"clear search
-nmap <silent> <leader>. :nohl<CR>
-
-" stay in visual mode when shifting
-vnoremap < <gv
-vnoremap > >gv 
-
-" When forgetting to sudo
-cmap w!! w !sudo tee % >/dev/null
-
-" Zencoding
 imap <C-e> <C-y>,
 imap <C-z> <C-y>N
 imap <C-x> <C-y>n
 
-" Helper Views
+""" Mapping Leader Keys
+nmap <Leader>c :TComment<CR>
+vmap <Leader>c :TComment<CR>
+
+""" Mapping FKeys
+nmap <F2> :w<CR>
+imap <F2> <Esc>:w<CR>
+vmap <F2> <Esc>:w<CR>
 nmap <F5>  :NERDTreeToggle<CR>
 nmap <F6>  :TagbarToggle<CR>
+
+""" Command mode mappings
+cmap w!! w !sudo tee % >/dev/null
 
 " Handle other filetypes
 autocmd BufNewFile,BufRead *.less set ft=css
