@@ -86,3 +86,7 @@
 	path = vim/vim/bundle/vim-autoclose
 	url = https://github.com/Townk/vim-autoclose.git
     ignore = untracked
+[submodule "vim/vim/bundle/vim-powerline"]
+	path = vim/vim/bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
+    ignore = untracked
