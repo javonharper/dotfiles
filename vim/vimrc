@@ -46,6 +46,7 @@ set wildignore+=*~,*.swp,*.tmp,*.bak            "Ignore backup files
 " Movement
 set backspace=indent,eol,start  " Intuitive backspacing.
 set scrolloff=10                " Show 10 lines of context around the cursor.
+set mouse=a                     " Set mouse in term
 
 " Searching
 set ignorecase   " Ignore case when searching
