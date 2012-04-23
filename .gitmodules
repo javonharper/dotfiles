@@ -82,3 +82,7 @@
 	path = vim/vim/bundle/vim-web-indent
 	url = https://github.com/lukaszb/vim-web-indent.git
     ignore = untracked
+[submodule "vim/vim/bundle/vim-autoclose"]
+	path = vim/vim/bundle/vim-autoclose
+	url = https://github.com/Townk/vim-autoclose.git
+    ignore = untracked

@@ -54,6 +54,7 @@ alias gs='git status'
 alias gd='git diff | vim -'
 alias gl='git log -l 5'
 alias ga='git add .'
+alias wtfgit='^hg^git'
 
 mkcd() { mkdir -p "$1" && cd "$1"; }
 cdl() { cd "$1" && ls; }
