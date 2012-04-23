@@ -103,6 +103,8 @@ imap <C-x> <C-y>n
 """ Mapping Leader Keys
 nmap <Leader>c :TComment<CR>
 vmap <Leader>c :TComment<CR>
+nmap <Leader>h :nohl<CR>
+vmap <Leader>h :nohl<CR>
 
 """ Mapping FKeys
 nmap <F2> :w<CR>
