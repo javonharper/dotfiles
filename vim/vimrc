@@ -9,12 +9,17 @@ call add(g:pathogen_disabled, 'delimitMate') "Overzealous w/ errors
 call pathogen#infect()    " Start pathogen plugin
 call pathogen#helptags()  " command-t needs it
 
-
 syntax enable             " enables syntax highlighting 
 filetype plugin indent on " Recognize filetype
 set t_Co=256              " for colorschemes:
 set background=dark
 colorscheme zenburn
+
+" Powerline
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set fillchars+=stl:\ ,stlnc:\
+set laststatus=2
 
 " Interface
 set number                   " line numbers
