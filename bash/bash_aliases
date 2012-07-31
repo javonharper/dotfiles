@@ -36,6 +36,7 @@ alias chromium-browser='chromium-browser -allow-file-access-from-files'
 alias top='htop'
 alias ack='ack-grep'
 alias ebash='vim ~/.bashrc'
+alias sp='vim ~/scratchpad'
 
 # Mercurial Aliases
 alias hp='hg push'
