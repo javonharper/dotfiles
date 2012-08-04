@@ -15,28 +15,34 @@ alias l='ls -CF'
 alias mkdir='mkdir -p'
 alias cp='cp -r'
 alias rm='rm -r'
+alias cmx='chmod +x'
 
-alias c='clear'
-alias q='exit'
 alias py='python'
 alias rb='ruby'
 
-alias cmx='chmod +x'
+# Movement
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
+alias back='cd -'
 
-alias wrapitup='sudo shutdown -P +30'
+alias ebash='vim ~/.bashrc'
+alias elocalbash='vim ~/.bashrc_local'
+alias sp='vim ~/scratchpad'
+
+alias ack='ack-grep'
+alias top='htop'
+alias chromium-browser='chromium-browser -allow-file-access-from-files'
+
+alias apt-get='sudo apt-get'
+alias update='sudo apt-get update'
+
+alias wrapitup='sudo shutdown -P +45'
 alias svnadd='svn st | grep "?" | awk "{print $2}" | xargs svn add $1'
 alias dcss='ssh joshua@crawl.akrasiac.org' #pass: joshua
 alias server='python -m SimpleHTTPServer'
-alias chromium-browser='chromium-browser -allow-file-access-from-files'
-alias top='htop'
-alias ack='ack-grep'
-alias ebash='vim ~/.bashrc'
-alias sp='vim ~/scratchpad'
 
 # Mercurial Aliases
 alias hp='hg push'
