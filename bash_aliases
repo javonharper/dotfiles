@@ -57,6 +57,7 @@ alias hi='hg in'
 # Git Aliases
 alias cdroot='cd $(git rev-parse --show-toplevel)'
 alias gp='git push'
+alias gp='git push'
 alias gu='git pull'
 alias gs='git status'
 alias gd='git diff | vim -'
@@ -64,3 +65,4 @@ alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias ga='git add .'
 alias gc='git commit'
 alias gac='git add .;git commit'
+alias gcp='git add .;git commit; git push'
