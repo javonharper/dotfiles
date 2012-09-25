@@ -36,9 +36,6 @@ alias ack='ack-grep'
 alias top='htop'
 alias chromium-browser='chromium-browser -allow-file-access-from-files'
 
-alias apt-get='sudo apt-get'
-alias update='sudo apt-get update'
-
 alias wrapitup='sudo shutdown -P +45'
 alias svnadd='svn st | grep "?" | awk "{print $2}" | xargs svn add $1'
 alias dcss='ssh joshua@crawl.akrasiac.org' #pass: joshua
@@ -57,12 +54,12 @@ alias hi='hg in'
 # Git Aliases
 alias cdroot='cd $(git rev-parse --show-toplevel)'
 alias gp='git push'
-alias gp='git push'
 alias gu='git pull'
 alias gs='git status'
 alias gd='git diff | vim -'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
-alias ga='git add .'
+alias ga='git add -A .'
+alias gb='git branch -a'
 alias gc='git commit'
-alias gac='git add .;git commit'
-alias gcp='git add .;git commit; git push'
+alias gac='ga; git commit'
+alias gcp='ga; git push'
