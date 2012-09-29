@@ -7,3 +7,8 @@ if [[ -a ~/.zshrc_aliases ]]
 then
     source ~/.zsh_aliases
 fi
+
+if [[ -a ~/.bash_aliases ]]
+then
+    source ~/.bash_aliases
+fi
