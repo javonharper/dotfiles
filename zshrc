@@ -1,3 +1,5 @@
+export PROMPT='[%n at %~]$ '
+
 if [[ -a ~/.zshrc_local ]]
 then
     source ~/.zshrc_local
