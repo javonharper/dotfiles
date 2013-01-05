@@ -4,7 +4,6 @@ set nocompatible
 let g:pathogen_disabled = []
 
 call add(g:pathogen_disabled, 'syntastic') " Overzealous w/ errors
-call add(g:pathogen_disabled, 'delimitMate') " Getting annoying when it doesn't work
 call add(g:pathogen_disabled, 'command-t') " Trying out native ctrl-p plugin
 
 call pathogen#infect()      " Start pathogen plugin
