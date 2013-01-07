@@ -3,15 +3,14 @@ set nocompatible
 " Disable some plugins temporarily
 let g:pathogen_disabled = []
 
-call add(g:pathogen_disabled, 'syntastic') " Overzealous w/ errors
-call add(g:pathogen_disabled, 'command-t') " Trying out native ctrl-p plugin
+"call add(g:pathogen_disabled, 'pluginname')
 
 call pathogen#infect()      " Start pathogen plugin
 call pathogen#helptags()    " Command-t needs it
 
 syntax enable                " Enables syntax highlighting 
 filetype plugin indent on    " Recognize filetype
-set t_Co=16                 " For colorschemes:
+set t_Co=256                 " For colorschemes
 set background=dark
 colorscheme solarized
 
@@ -26,7 +25,7 @@ set number        " Line numbers
 set nowrap        " Turn off line wrapping
 set ruler         " Linenum, colnum displayes
 set cursorline    " Shows current line highlighted
-set showcmd       " Show incompletecommand
+set showcmd       " Show incomplete commands
 set showmode      " Show mode I'm in
 set showmatch     " Show matching bracets when text indicator is over them
 
@@ -42,6 +41,7 @@ set wildignore+=*.jar,*.zip                      " Ignore compressed files
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png    " Ignore image files
 set wildignore+=.DS_Store,.git,.hg,.svn          " Ignore hidden files and folders
 set wildignore+=*~,*.swp,*.tmp,*.bak             " Ignore backup files
+set wildignore+=node_modules,npm-debug.log       " Ignore some Javascript files
 
 " Movement
 set backspace=indent,eol,start    " Intuitive backspacing.
@@ -90,6 +90,12 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
+" Better buffer movement
+map <C-p> :bp<CR>
+map <C-n> :bn<CR>
+map <C-d> :bd<CR>
+map <C-b> :ls<CR>:b<space>
+
 " Select All
 map <C-a> ggVG 
 
@@ -118,6 +124,11 @@ nmap <F6> :TagbarToggle<CR>
 
 """ Command mode mappings
 cmap w!! w !sudo tee % >/dev/null
+
+"Surround Reminders
+" cs<1><2> "change surrounding <1> to <2>"
+" ds<1> "delete surrounding <1>"
+" ys<to><1> "surround text object <to> with <1>"
 
 """ Handle other filetypes
 autocmd BufNewFile,BufRead *.less set ft=css
