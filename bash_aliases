@@ -28,6 +28,7 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
 alias ebash='vim ~/.bashrc'
+alias ealiases='vim ~/.bash_aliases'
 alias ebash_local='vim ~/.bashrc_local'
 alias sp='vim ~/scratchpad'
 
@@ -39,6 +40,7 @@ alias wrapitup='sudo shutdown -P +45'
 alias svnadd='svn st | grep "?" | awk "{print $2}" | xargs svn add $1'
 alias dcss='ssh joshua@crawl.akrasiac.org' #pass: joshua
 alias server='python -m SimpleHTTPServer'
+alias mongos='mongod --dbpath=db'
 
 # Mercurial Aliases
 alias hp='hg push'

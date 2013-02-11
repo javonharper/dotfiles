@@ -116,7 +116,7 @@ vmap <Leader>c :TComment<CR>
 nmap <Leader>e :e $MYVIMRC<CR>
 
 """ Mapping FKeys
-nmap <F2> :w<CR>
+nmap <F2> <Esc>:w<CR>
 imap <F2> <Esc>:w<CR>
 vmap <F2> <Esc>:w<CR>
 nmap <F5> :NERDTreeToggle<CR>
