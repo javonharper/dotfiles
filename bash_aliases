@@ -17,9 +17,6 @@ alias cp='cp -r'
 alias rm='rm -r'
 alias cmx='chmod +x'
 
-alias py='python'
-alias rb='ruby'
-
 # Movement
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -27,24 +24,37 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
+# Movement to special folders
+alias dev='cd ~/dev'
+alias projects='cd ~/dev/projects'
+alias dotfiles='cd ~/dev/projects/dotfiles'
+alias temp='cd ~/temp'
+alias desktop='cd ~/Desktop'
+
+# Editing config files
 alias ebash='vim ~/.bashrc'
-alias ealiases='vim ~/.bash_aliases'
 alias ebash_local='vim ~/.bashrc_local'
+alias elbash_local='ebash_local'
+alias ealiases='vim ~/.bash_aliases'
+alias etmux='vim ~/.tmux.conf'
 alias sp='vim ~/scratchpad'
 
+# App shorteners
 alias ack='ack-grep'
 alias top='htop'
 alias chromium-browser='chromium-browser -allow-file-access-from-files'
-
-alias wrapitup='sudo shutdown -P +45'
-alias svnadd='svn st | grep "?" | awk "{print $2}" | xargs svn add $1'
-alias dcss='ssh joshua@crawl.akrasiac.org' #pass: joshua
+alias py='python'
+alias rb='ruby'
 alias server='python -m SimpleHTTPServer'
 alias mongos='mongod --dbpath=db'
+
+alias wrapitup='sudo shutdown -P +45'
+alias dcss='ssh joshua@crawl.akrasiac.org' #pass: joshua
 
 # Mercurial Aliases
 alias hp='hg push'
 alias hu='hg fetch'
+alias hur='hg pull --rebase'
 alias hs='hg status'
 alias hd='hg diff | view -'
 alias hp='hg push'
@@ -65,3 +75,6 @@ alias gb='git branch -a'
 alias gc='git commit'
 alias gac='ga; git commit'
 alias gco='git checkout'
+
+# Subversion Aliases
+alias svnadd='svn st | grep "?" | awk "{print $2}" | xargs svn add $1'
