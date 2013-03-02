@@ -5,6 +5,7 @@ ln -sf $PWD/bashrc $HOME/.bashrc
 ln -sf $PWD/zshrc $HOME/.zshrc
 ln -sf $PWD/bash_aliases $HOME/.bash_aliases
 ln -sf $PWD/terminator $HOME/.config/terminator/config
+ln -sf $PWD/tmux.conf $HOME/.tmux.conf
 
 # vim config
 ln -sf $PWD/vimrc $HOME/.vimrc
