@@ -13,12 +13,6 @@
 [submodule "vim/bundle/vim-jade"]
 	path = vim/bundle/vim-jade
 	url = https://github.com/digitaltoad/vim-jade.git
-[submodule "vim/bundle/JSON.vim"]
-	path = vim/bundle/JSON.vim
-	url = https://github.com/elzr/vim-json 
-[submodule "vim/bundle/ctrp.vim"]
-	path = vim/bundle/ctrp.vim
-	url = https://github.com/kien/ctrlp.vim 
 [submodule "vim/bundle/jquery.vim"]
 	path = vim/bundle/jquery.vim
 	url = https://github.com/nono/jquery.vim 
@@ -58,3 +52,9 @@
 [submodule "vim/mattn/zencoding-vim"]
 	path = vim/bundle/zencoding-vim
 	url = https://github.com/mattn/zencoding-vim
+[submodule "vim/mattn/JSON.vim"]
+	path = vim/bundle/JSON.vim
+	url = https://github.com/vim-scripts/JSON.vim
+[submodule "vim/kien/ctrlp.vim"]
+	path = vim/bundle/ctrp.vim
+	url = https://github.com/kien/ctrlp.vim
