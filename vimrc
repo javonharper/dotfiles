@@ -58,8 +58,8 @@ set smartindent    " Smart indent when inserting new line
 set autoindent     " Copy indent from above line
 set smarttab       " Activate smart tabs
 set expandtab      " Insert space characters whenever the tab key is pressed
-set tabstop=4      " Control the number of space characters that will be inserted when the tab key is pressed
-set shiftwidth=4   " Change the number of space characters inserted for indentation
+set tabstop=2      " Control the number of space characters that will be inserted when the tab key is pressed
+set shiftwidth=2   " Change the number of space characters inserted for indentation
 
 " Re map leader
 let mapleader=","
