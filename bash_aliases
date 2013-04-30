@@ -16,6 +16,7 @@ alias mkdir='mkdir -p'
 alias cp='cp -r'
 alias rm='rm -r'
 alias cmx='chmod +x'
+alias c='clear'
 
 # Movement
 alias ..='cd ..'
@@ -50,6 +51,7 @@ alias py='python'
 alias rb='ruby'
 alias server='python -m SimpleHTTPServer'
 alias mongos='mongod --dbpath=db'
+alias bi='bundle install'
 
 alias wrapitup='sudo shutdown -P +45'
 alias dcss='ssh joshua@crawl.akrasiac.org' #pass: joshua

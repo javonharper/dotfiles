@@ -1,3 +1,4 @@
+# Prompt
 export PROMPT='[%n at %~]$ '
 
 if [[ -a ~/.bash_aliases ]]
