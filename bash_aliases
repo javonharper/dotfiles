@@ -16,6 +16,7 @@ alias mkdir='mkdir -p'
 alias cp='cp -r'
 alias rm='rm -r'
 alias cmx='chmod +x'
+alias c='clear'
 
 # Movement
 alias ..='cd ..'
