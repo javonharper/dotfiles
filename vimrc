@@ -2,7 +2,6 @@ set nocompatible
 
 " Disable some plugins temporarily
 let g:pathogen_disabled = []
-
 "call add(g:pathogen_disabled, 'pluginname')
 
 call pathogen#infect()      " Start pathogen plugin
@@ -94,7 +93,7 @@ nmap <C-l> <C-w>l
 map <C-p> :bp<CR>
 map <C-n> :bn<CR>
 map <C-d> :bd<CR>
-map <C-b> :ls<CR>:b<space>
+map <Leader>b :ls<CR>:b<space>
 
 " Select All
 map <C-a> ggVG 
