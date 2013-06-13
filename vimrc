@@ -35,7 +35,7 @@ set splitright    " vs splits new window to east
 " Bash-like completion
 set wildmenu                                     " Status line for vim
 set wildmode=list:longest                        " Complete files like a shell
-set wildignore+=*.a,*.o,*.class,*.pyc            " Ignore compiled files
+set wildignore+=*.a,*.o,*.class,*.pyc,*.scssc    " Ignore compiled files
 set wildignore+=*.jar,*.zip                      " Ignore compressed files
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png    " Ignore image files
 set wildignore+=.DS_Store,.git,.hg,.svn          " Ignore hidden files and folders
@@ -83,6 +83,9 @@ noremap Y y$
 nmap K 0D
 
 """ Mapping CtrlKeys
+" Reload vimrc
+nmap <C-r> :source ~/.vimrc<CR>
+
 " Better movement between windows
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
