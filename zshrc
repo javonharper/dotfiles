@@ -1,5 +1,6 @@
 # Prompt
-export PROMPT='[%n at %~]$ '
+export PROMPT='[%~]$ '
+export RPROMPT='%n'
 
 if [[ -a ~/.bash_aliases ]]
 then
@@ -11,7 +12,7 @@ then
     source ~/.zshrc_local
 fi
 
-if [[ -a ~/.zshrc_aliases ]]
+if [[ -a ~/.zsh_aliases ]]
 then
     source ~/.zsh_aliases
 fi
