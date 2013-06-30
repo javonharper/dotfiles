@@ -49,7 +49,7 @@ set scrolloff=10                  " Show 10 lines of context around the cursor.
 
 " Searching
 set ignorecase    " Ignore case when searching
-set smartcase     " Igore case when lowercase is given
+set smartcase     " Ignore case when lowercase is given
 set hlsearch      " Highlight search things
 set incsearch     " Make search act like search in modern browsers
 
