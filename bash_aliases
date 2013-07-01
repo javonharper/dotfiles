@@ -41,7 +41,12 @@ alias ezsh_local='vim ~/.zshrc_local'
 alias elzsh='ezsh_local'
 alias ealiases='vim ~/.bash_aliases'
 alias etmux='vim ~/.tmux.conf'
-alias sp='vim ~/scratchpad'
+
+# Editng personal files
+alias scratchpad='vim ~/scratchpad'
+alias sp='scratchpad'
+alias pomodoro='vim ~/pomodoro'
+alias p='pomodoro'
 
 # App shorteners
 alias ack='ack-grep'
@@ -76,7 +81,7 @@ alias gd='git diff | view -'
 alias gdc='git diff --cached | view -'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
 alias ga='git add -A .'
-alias gb='git branch -a'
+alias gb='git branch'
 alias gc='git commit'
 alias gac='ga; git commit'
 alias gco='git checkout'
