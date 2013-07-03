@@ -93,10 +93,10 @@ nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
 " Better buffer movement
-map <C-p> :bp<CR>
-map <C-n> :bn<CR>
-map <C-d> :bd<CR>
-map <Leader>b :ls<CR>:b<space>
+noremap <C-p> :bp<CR>
+noremap <C-n> :bn<CR>
+noremap <C-d> :bd<CR>
+noremap <Leader>b :ls<CR>:b<space>
 
 " Select All
 map <C-a> ggVG 
