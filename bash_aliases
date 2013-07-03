@@ -49,7 +49,7 @@ alias pomodoro='vim ~/pomodoro'
 alias p='pomodoro'
 
 # App shorteners
-alias ack='ack-grep'
+alias ack='ack-grep -u -i'
 alias top='htop'
 alias chromium-browser='chromium-browser -allow-file-access-from-files'
 alias py='python'
@@ -88,3 +88,12 @@ alias gco='git checkout'
 
 # Subversion Aliases
 alias svnadd='svn st | grep "?" | awk "{print $2}" | xargs svn add $1'
+
+# Functions
+function psgrep() {
+  ps auxww | grep ${1} | grep -v "grep ${1}"
+}
+
+# I know kung-fu
+alias neo='echo -ne "\e[32m" ; while true ; do echo -ne "\e[$(($RANDOM % 2 + 1))m" ; tr -c "[:print:]" " " < /dev/urandom | dd count=1 bs=50 2> /dev/null ; done'
+
