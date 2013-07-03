@@ -3,6 +3,7 @@ set nocompatible
 " Disable some plugins temporarily
 let g:pathogen_disabled = []
 "call add(g:pathogen_disabled, 'pluginname')
+call add(g:pathogen_disabled, 'vim-supertab')
 
 call pathogen#infect()      " Start pathogen plugin
 call pathogen#helptags()    " Command-t needs it
