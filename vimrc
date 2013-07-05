@@ -116,6 +116,7 @@ imap <C-w> <C-y>n
 """ Mapping Leader Keys
 nmap <Leader>c :TComment<CR>
 vmap <Leader>c :TComment<CR>
+nmap <Leader>t :CtrlP<CR>
 nmap <Leader>e :e $MYVIMRC<CR>
 
 """ Mapping FKeys
