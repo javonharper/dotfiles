@@ -93,7 +93,7 @@ nmap <C-l> <C-w>l
 " Better buffer movement
 noremap <C-p> :bp<CR>
 noremap <C-n> :bn<CR>
-noremap <C-d> :bd<CR>
+noremap <C-d> :bp\|bd # <CR>
 noremap <Leader>b :ls<CR>:b<space>
 
 " Select All
