@@ -84,9 +84,6 @@ noremap Y y$
 nmap K 0D
 
 """ Mapping CtrlKeys
-" Reload vimrc
-nmap <C-r> :source ~/.vimrc<CR>
-
 " Better movement between windows
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
@@ -96,7 +93,7 @@ nmap <C-l> <C-w>l
 " Better buffer movement
 noremap <C-p> :bp<CR>
 noremap <C-n> :bn<CR>
-noremap <C-d> :bd<CR>
+noremap <C-d> :bp\|bd # <CR>
 noremap <Leader>b :ls<CR>:b<space>
 
 " Select All
@@ -114,10 +111,22 @@ imap <C-q> <C-y>N
 imap <C-w> <C-y>n
 
 """ Mapping Leader Keys
+" Comment
 nmap <Leader>c :TComment<CR>
 vmap <Leader>c :TComment<CR>
+
+" Open file finder
 nmap <Leader>t :CtrlP<CR>
+
+" Jump to cucumber step definition
+nmap <Leader>d <C-]>
+
+" Edit vimrc
 nmap <Leader>e :e $MYVIMRC<CR>
+
+" Reload vimrc
+nmap <Leader>r :source ~/.vimrc<CR>
+
 
 """ Mapping FKeys
 nmap <F2> <Esc>:w<CR>

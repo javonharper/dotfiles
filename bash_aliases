@@ -18,6 +18,11 @@ alias rm='rm -r'
 alias cmx='chmod +x'
 alias c='clear'
 
+fatality () {
+  kill -9 $1
+  echo 'JAVON WINS\nFLAWLESS VICTORY'
+}
+
 # Movement
 alias ..='cd ..'
 alias ...='cd ../..'
