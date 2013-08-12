@@ -87,9 +87,11 @@ alias gdc='git diff --cached | view -'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
 alias ga='git add -A .'
 alias gb='git branch'
+alias gbd='git branch -D'
 alias gc='git commit'
 alias gac='ga; git commit'
 alias gco='git checkout'
+alias gr='git rebase -i'
 
 # Subversion Aliases
 alias svnadd='svn st | grep "?" | awk "{print $2}" | xargs svn add $1'
@@ -102,3 +104,4 @@ function psgrep() {
 # I know kung-fu
 alias neo='echo -ne "\e[32m" ; while true ; do echo -ne "\e[$(($RANDOM % 2 + 1))m" ; tr -c "[:print:]" " " < /dev/urandom | dd count=1 bs=50 2> /dev/null ; done'
 
+alias fors="foreman start -f Procfile.dev"
