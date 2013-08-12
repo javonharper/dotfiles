@@ -48,10 +48,10 @@ alias ealiases='vim ~/.bash_aliases'
 alias etmux='vim ~/.tmux.conf'
 
 # Editng personal files
-alias scratchpad='vim ~/scratchpad'
-alias sp='scratchpad'
-alias pomodoro='vim ~/pomodoro'
-alias p='pomodoro'
+alias scratchpad='note scratchpad'
+alias sp='note scratchpad'
+alias pomodoro='note pomodoro'
+alias p='note pomodoro'
 
 # App shorteners
 alias ack='ack-grep -u -i'
@@ -99,6 +99,11 @@ alias svnadd='svn st | grep "?" | awk "{print $2}" | xargs svn add $1'
 # Functions
 function psgrep() {
   ps auxww | grep ${1} | grep -v "grep ${1}"
+}
+
+function note() {
+  touch ~/docs/notes/${1}
+  vim ~/docs/notes/${1}
 }
 
 # I know kung-fu
