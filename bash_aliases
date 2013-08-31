@@ -62,6 +62,7 @@ alias rb='ruby'
 alias server='python -m SimpleHTTPServer'
 alias mongos='mongod --dbpath=db'
 alias bi='bundle install'
+alias forms="foreman start -f Procfile.dev"
 
 alias wrapitup='sudo shutdown -P +45'
 alias dcss='ssh joshua@crawl.akrasiac.org' #pass: joshua
@@ -87,18 +88,22 @@ alias gdc='git diff --cached | view -'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
 alias ga='git add -A .'
 alias gb='git branch'
+alias gbd='git branch -D'
 alias gc='git commit'
 alias gac='ga; git commit'
 alias gco='git checkout'
+alias gr='git rebase -i'
 
 # Subversion Aliases
 alias svnadd='svn st | grep "?" | awk "{print $2}" | xargs svn add $1'
 
 # Functions
+# Find all the processes that match a string
 function psgrep() {
   ps auxww | grep ${1} | grep -v "grep ${1}"
 }
 
+# Finds or create a note in a docs folder
 function note() {
   touch ~/docs/notes/${1}
   vim ~/docs/notes/${1}
