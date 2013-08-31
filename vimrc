@@ -8,7 +8,7 @@ call add(g:pathogen_disabled, 'vim-supertab')
 call pathogen#infect()      " Start pathogen plugin
 call pathogen#helptags()    " Command-t needs it
 
-syntax enable                " Enables syntax highlighting 
+syntax enable                " Enables syntax highlighting
 filetype plugin indent on    " Recognize filetype
 set t_Co=256                 " For colorschemes
 set background=dark
@@ -30,8 +30,9 @@ set showmode      " Show mode I'm in
 set showmatch     " Show matching bracets when text indicator is over them
 
 " Buffer management
-set hidden        " Handle multiple buffers better.
-set splitright    " vs splits new window to east
+set hidden      " Handle multiple buffers better.
+set splitright  " vs splits new window to east
+set autowrite   " Save files when switching buffer
 
 " Bash-like completion
 set wildmenu                                     " Status line for vim
@@ -94,21 +95,16 @@ nmap <C-l> <C-w>l
 noremap <C-p> :bp<CR>
 noremap <C-n> :bn<CR>
 noremap <C-d> :bp\|bd # <CR>
-noremap <Leader>b :ls<CR>:b<space>
+noremap <Leader>b :CtrlPBuffer<CR>
 
 " Select All
-map <C-a> ggVG 
+map <C-a> ggVG
 
 " Copy/paste from system clipboard
 nmap <C-v> "+p
 vmap <C-v> "+p
 nmap <C-c> "+y
 vmap <C-c> "+y
-
-" Zencoding Helpers
-imap <C-e> <C-y>,
-imap <C-q> <C-y>N
-imap <C-w> <C-y>n
 
 """ Mapping Leader Keys
 " Comment
@@ -127,8 +123,13 @@ nmap <Leader>e :e $MYVIMRC<CR>
 " Reload vimrc
 nmap <Leader>r :source ~/.vimrc<CR>
 
+" Search
+nmap <Leader>a :Ack 
+
+nmap <leader>s :%s/\s\+$//<CR>
 
 """ Mapping FKeys
+nmap <F1> <Esc>:w<CR>
 nmap <F2> <Esc>:w<CR>
 imap <F2> <Esc>:w<CR>
 vmap <F2> <Esc>:w<CR>
@@ -138,10 +139,8 @@ nmap <F6> :TagbarToggle<CR>
 """ Command mode mappings
 cmap w!! w !sudo tee % >/dev/null
 
-"Surround Reminders
-" cs<1><2> "change surrounding <1> to <2>"
-" ds<1> "delete surrounding <1>"
-" ys<to><1> "surround text object <to> with <1>"
+"Rebalance windows on resize
+autocmd VimResized * :wincmd =
 
 """ Handle other filetypes
 autocmd BufNewFile,BufRead *.less set ft=css
