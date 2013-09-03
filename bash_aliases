@@ -54,7 +54,7 @@ alias pomodoro='note pomodoro'
 alias p='note pomodoro'
 
 # App shorteners
-alias ack='ack-grep -u -i'
+alias ack='ack-grep -i'
 alias top='htop'
 alias chromium-browser='chromium-browser -allow-file-access-from-files'
 alias py='python'
@@ -104,6 +104,10 @@ function psgrep() {
 function note() {
   touch ~/docs/notes/${1}
   vim ~/docs/notes/${1}
+}
+
+function cuke() {
+  cucumber --tags ~@ignore features/$1.feature
 }
 
 # I know kung-fu
