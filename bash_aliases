@@ -62,6 +62,7 @@ alias rb='ruby'
 alias server='python -m SimpleHTTPServer'
 alias mongos='mongod --dbpath=db'
 alias bi='bundle install'
+alias forms="foreman start -f Procfile.dev"
 
 alias wrapitup='sudo shutdown -P +45'
 alias dcss='ssh joshua@crawl.akrasiac.org' #pass: joshua
@@ -97,10 +98,12 @@ alias gr='git rebase -i'
 alias svnadd='svn st | grep "?" | awk "{print $2}" | xargs svn add $1'
 
 # Functions
+# Find all the processes that match a string
 function psgrep() {
   ps auxww | grep ${1} | grep -v "grep ${1}"
 }
 
+# Finds or create a note in a docs folder
 function note() {
   touch ~/docs/notes/${1}
   vim ~/docs/notes/${1}
@@ -113,4 +116,21 @@ function cuke() {
 # I know kung-fu
 alias neo='echo -ne "\e[32m" ; while true ; do echo -ne "\e[$(($RANDOM % 2 + 1))m" ; tr -c "[:print:]" " " < /dev/urandom | dd count=1 bs=50 2> /dev/null ; done'
 
-alias fors="foreman start -f Procfile.dev"
+# Mark (https://news.ycombinator.com/item?id=6229001)
+export MARKPATH=$HOME/.marks
+
+function jump {
+  cd -P $MARKPATH/$1 2> /dev/null || echo "No such mark: $1"
+}
+
+function mark {
+  mkdir -p $MARKPATH; ln -s $(pwd) $MARKPATH/$1
+}
+
+function unmark {
+  rm -i $MARKPATH/$1
+}
+
+function marks {
+  ls -l $MARKPATH | sed 's/  / /g' | cut -d' ' -f9- && echo
+}
