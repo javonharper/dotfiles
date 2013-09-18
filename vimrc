@@ -128,6 +128,10 @@ nmap <Leader>a :Ack
 
 nmap <leader>s :%s/\s\+$//<CR>
 
+nmap <leader>C :Econtroller<CR>
+nmap <leader>M :Emodel<CR>
+nmap <leader>T :Eunittest<CR>
+
 """ Mapping FKeys
 nmap <F1> <Esc>:w<CR>
 nmap <F2> <Esc>:w<CR>

@@ -113,6 +113,10 @@ function cuke() {
   cucumber --tags ~@ignore features/$1.feature
 }
 
+function fcuke() {
+  cucumber --tags @focus ~@ignore features/$1.feature
+}
+
 # I know kung-fu
 alias neo='echo -ne "\e[32m" ; while true ; do echo -ne "\e[$(($RANDOM % 2 + 1))m" ; tr -c "[:print:]" " " < /dev/urandom | dd count=1 bs=50 2> /dev/null ; done'
 
