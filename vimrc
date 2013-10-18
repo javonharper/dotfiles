@@ -2,7 +2,7 @@ set nocompatible
 
 " Disable some plugins temporarily
 let g:pathogen_disabled = []
-"call add(g:pathogen_disabled, 'pluginname')
+" call add(g:pathogen_disabled, 'pluginname')
 call add(g:pathogen_disabled, 'vim-supertab')
 
 call pathogen#infect()      " Start pathogen plugin
@@ -23,7 +23,7 @@ set laststatus=2
 " Interface
 set number        " Line numbers
 set nowrap        " Turn off line wrapping
-set ruler         " Linenum, colnum displayes
+set ruler         " Linenum, colnum displays
 set cursorline    " Shows current line highlighted
 set showcmd       " Show incomplete commands
 set showmode      " Show mode I'm in
@@ -72,12 +72,6 @@ let g:maplocalleader=','
 map N Nzz
 map n nzz
 
-""" Remapping Symbols
-" Auto complete and intent paired symbols on newline
-inoremap {<cr> {<cr>}<c-o>O<tab>
-inoremap [<cr> [<cr>]<c-o>O<tab>
-inoremap (<cr> (<cr>)<c-o>O<tab>
-
 """ Remapping ShiftKeys
 noremap U :redo<CR>
 noremap H :nohl<CR>
@@ -124,10 +118,12 @@ nmap <Leader>e :e $MYVIMRC<CR>
 nmap <Leader>r :source ~/.vimrc<CR>
 
 " Search
-nmap <Leader>a :Ack 
+nmap <Leader>a :Ack
 
+" Hi-light trailing spaces
 nmap <leader>s :%s/\s\+$//<CR>
 
+" Open related files in rails
 nmap <leader>C :Econtroller<CR>
 nmap <leader>M :Emodel<CR>
 nmap <leader>T :Eunittest<CR>
@@ -138,7 +134,6 @@ nmap <F2> <Esc>:w<CR>
 imap <F2> <Esc>:w<CR>
 vmap <F2> <Esc>:w<CR>
 nmap <F5> :NERDTreeToggle<CR>
-nmap <F6> :TagbarToggle<CR>
 
 """ Command mode mappings
 cmap w!! w !sudo tee % >/dev/null
