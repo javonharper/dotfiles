@@ -19,9 +19,6 @@
 [submodule "vim/scroloose/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree
-[submodule "vim/majutsushu/tagbar"]
-	path = vim/bundle/tagbar
-	url = https://github.com/majutsushi/tagbar 
 [submodule "vim/tomtom/tcomment_vim"]
 	path = vim/bundle/tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim 
