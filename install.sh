@@ -8,6 +8,7 @@ ln -sf $PWD/zsh_aliases $HOME/.zsh_aliases
 ln -sf $PWD/terminator $HOME/.config/terminator/config
 ln -sf $PWD/tmux.conf $HOME/.tmux.conf
 ln -sf $PWD/ackrc $HOME/.ackrc
+ln -sf $PWD/gitconfig $HOME/gitconfig
 
 # vim config
 ln -sf $PWD/vimrc $HOME/.vimrc
