@@ -17,6 +17,7 @@ alias cp='cp -r'
 alias rm='rm -r'
 alias cmx='chmod +x'
 alias c='clear'
+alias start-networking='sudo nmcli nm sleep false'
 
 fatality () {
   kill -9 $1
