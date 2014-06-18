@@ -1,5 +1,8 @@
 #!/bin/bash
 
+mkdir -p $HOME/bin/
+mkdir -p $HOME/.config/terminator/
+
 # shell & emulator config
 ln -sf $PWD/bashrc $HOME/.bashrc
 ln -sf $PWD/zshrc $HOME/.zshrc
