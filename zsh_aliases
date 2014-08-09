@@ -1,8 +1,0 @@
-alias -s rb=vim
-alias -s py=vim
-alias -s js=vim
-alias -s coffee=vim
-alias -s jade=vim
-alias -s html=vim
-alias -s styl=vim
-alias -s css=vim
