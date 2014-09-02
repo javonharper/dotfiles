@@ -14,4 +14,4 @@ ln -sf $PWD/vimrc $HOME/.vimrc
 ln -sf $PWD/gvimrc $HOME/.gvimrc
 ln -sf $PWD/vim $HOME/.vim
 
-cp -f $PWD/scripts/* $HOME/bin/
+# cp -f $PWD/scripts/* $HOME/bin/

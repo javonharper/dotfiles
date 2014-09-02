@@ -63,6 +63,7 @@ alias server='python -m SimpleHTTPServer'
 alias mongos='mongod --dbpath=db'
 alias bi='bundle install'
 alias forms="foreman start -f Procfile.dev"
+alias rmsketch="rm Library/Application\ Support/com.bohemiancoding.sketch3/.sketch3"
 
 alias wrapitup='sudo shutdown -P +45'
 alias dcss='ssh joshua@crawl.akrasiac.org' #pass: joshua
