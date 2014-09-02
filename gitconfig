@@ -1,0 +1,15 @@
+[user]
+  name = Javon Harper
+  email = javon.d.harper@gmail.com
+
+[core]
+  editor = vim
+
+[web]
+  browser = google-chrome
+
+[push]
+  default = matching
+
+[color]
+  ui = always

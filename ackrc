@@ -4,4 +4,4 @@
 --type-set=sass=.scss,.sass
 --type-set=feature=.feature
 
---ignore-dir=log,tags,tmp
+--ignore-dir=log,tags,tmp,env
