@@ -32,11 +32,9 @@ alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
 # Movement to special folders
-alias dev='cd ~/dev'
-alias projects='cd ~/dev/projects'
-alias dotfiles='cd ~/dev/projects/dotfiles'
-alias temp='cd ~/temp'
-alias desktop='cd ~/Desktop'
+alias cdroot='cd "$(git rev-parse --show-toplevel)"'
+alias gitroot='cd "$(git rev-parse --show-toplevel)"'
+alias root='cd "$(git rev-parse --show-toplevel)"'
 
 # Editing config files
 alias ebash='vim ~/.bashrc'
@@ -54,6 +52,7 @@ alias top='htop'
 alias py='python'
 alias rb='ruby'
 alias server='python -m SimpleHTTPServer'
+alias tmux="TERM=screen-256color-bce tmux"
 
 alias dcss='ssh joshua@crawl.akrasiac.org' #pass: joshua
 
@@ -83,6 +82,7 @@ alias gc='git commit'
 alias gac='ga; git commit'
 alias gco='git checkout'
 alias gr='git rebase -i'
+alias gsince='git diff master.. | vim -'
 
 # Subversion Aliases
 alias svnadd='svn st | grep "?" | awk "{print $2}" | xargs svn add $1'
