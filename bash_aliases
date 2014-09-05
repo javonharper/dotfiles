@@ -51,9 +51,13 @@ alias ack='ack-grep -i'
 alias top='htop'
 alias py='python'
 alias rb='ruby'
+
 alias server='python -m SimpleHTTPServer'
 alias tmux="TERM=screen-256color-bce tmux"
+alias forms="foreman start -f Procfile.dev"
+alias mongos='mongod --dbpath=db'
 
+alias rmsketch="rm Library/Application\ Support/com.bohemiancoding.sketch3/.sketch3"
 alias dcss='ssh joshua@crawl.akrasiac.org' #pass: joshua
 
 # Mercurial Aliases

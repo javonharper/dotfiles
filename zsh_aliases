@@ -1,12 +1,3 @@
-alias -s rb=vim
-#alias -s py=vim
-alias -s js=vim
-alias -s coffee=vim
-alias -s jade=vim
-alias -s html=vim
-alias -s styl=vim
-alias -s css=vim
-
 if type workon >/dev/null 2>&1; then
   VENV_WRAPPER=true
 else
