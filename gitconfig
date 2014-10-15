@@ -12,4 +12,7 @@
   default = matching
 
 [color]
-  ui = always
+	ui = true
+
+[alias]
+  conflicts = diff --name-only --diff-filter=U

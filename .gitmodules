@@ -79,6 +79,9 @@
 [submodule "vim/bundle/rename.vim"]
 	path = vim/bundle/rename.vim
 	url = https://github.com/danro/rename.vim
+[submodule "vim/bundle/YouCompleteMe"]
+	path = vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe
 [submodule "vim/bundle/handlebars-vim"]
 	path = vim/bundle/handlebars-vim
 	url = https://github.com/nono/vim-handlebars
