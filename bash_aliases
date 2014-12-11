@@ -24,6 +24,11 @@ fatality () {
   echo 'JAVON WINS\nFLAWLESS VICTORY'
 }
 
+k () {
+  printf 'Attempting to kill process %s...\n' $1
+  kill -9 $1
+}
+
 # Movement
 alias ..='cd ..'
 alias ...='cd ../..'
