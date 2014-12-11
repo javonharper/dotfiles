@@ -85,3 +85,9 @@
 [submodule "vim/bundle/handlebars-vim"]
 	path = vim/bundle/handlebars-vim
 	url = https://github.com/nono/vim-handlebars
+[submodule "vim/bundle/vim-clojure-static"]
+	path = vim/bundle/vim-clojure-static
+	url = https://github.com/guns/vim-clojure-static
+[submodule "vim/bundle/rainbow_parentheses"]
+	path = vim/bundle/rainbow_parentheses
+	url = https://github.com/kien/rainbow_parentheses.vim

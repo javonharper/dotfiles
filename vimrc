@@ -4,6 +4,7 @@ set nocompatible
 let g:pathogen_disabled = []
 " call add(g:pathogen_disabled, 'pluginname')
 " call add(g:pathogen_disabled, 'vim-supertab')
+call add(g:pathogen_disabled, 'YouCompleteMe')
 call add(g:pathogen_disabled, 'vim-powerline')
 
 call pathogen#infect()      " Start pathogen plugin

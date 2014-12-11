@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir -p $HOME/bin/
+mkdir -p $HOME/Misc/Apps
 mkdir -p $HOME/.config/terminator/
 
 # shell & emulator config
@@ -18,4 +18,4 @@ ln -sf $PWD/vimrc $HOME/.vimrc
 ln -sf $PWD/gvimrc $HOME/.gvimrc
 ln -sf $PWD/vim $HOME/.vim
 
-# cp -f $PWD/scripts/* $HOME/bin/
+git submodule update --init --recursive
