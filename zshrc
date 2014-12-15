@@ -19,6 +19,10 @@ fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  ]]
 
+zstyle ':completion:::git:*' script /usr/local/etc/bash_completion.d/git-completion.bash
+
+fpath=(/usr/local/share/zsh/site-functions $fpath)
+
 
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
