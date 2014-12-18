@@ -52,7 +52,6 @@ alias ealiases='vim ~/.bash_aliases'
 alias etmux='vim ~/.tmux.conf'
 
 # App shorteners
-alias ack='ack-grep -i'
 alias top='htop'
 alias py='python'
 alias rb='ruby'
@@ -77,6 +76,7 @@ alias hi='hg in'
 alias ho='hg out'
 
 # Git Aliases
+alias git='hub'
 alias gcd='cd $(git rev-parse --show-toplevel)'
 alias gp='git push'
 alias gu='git pull'

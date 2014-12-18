@@ -22,6 +22,9 @@ set encoding=utf-8
 set fillchars+=stl:\ ,stlnc:\
 set laststatus=2
 
+" Clipboard
+set clipboard=unnamed
+
 " Interface
 set number        " Line numbers
 set nowrap        " Turn off line wrapping
