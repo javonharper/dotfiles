@@ -1,14 +1,11 @@
 #!/bin/bash
 
 mkdir -p $HOME/Misc/Apps
-mkdir -p $HOME/.config/terminator/
 
 # shell & emulator config
 ln -sf $PWD/bashrc $HOME/.bashrc
 ln -sf $PWD/zshrc $HOME/.zshrc
-ln -sf $PWD/bash_aliases $HOME/.bash_aliases
 ln -sf $PWD/zsh_aliases $HOME/.zsh_aliases
-ln -sf $PWD/terminator $HOME/.config/terminator/config
 ln -sf $PWD/tmux.conf $HOME/.tmux.conf
 ln -sf $PWD/ackrc $HOME/.ackrc
 ln -sf $PWD/gitconfig $HOME/.gitconfig
