@@ -7,7 +7,6 @@ ln -sf $PWD/bashrc $HOME/.bashrc
 ln -sf $PWD/zshrc $HOME/.zshrc
 ln -sf $PWD/zsh_aliases $HOME/.zsh_aliases
 ln -sf $PWD/tmux.conf $HOME/.tmux.conf
-ln -sf $PWD/ackrc $HOME/.ackrc
 ln -sf $PWD/gitconfig $HOME/.gitconfig
 
 # vim config
