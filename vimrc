@@ -96,9 +96,6 @@ noremap <C-n> :bn<CR>
 noremap <C-d> :bp\|bd # <CR>
 noremap <Leader>b :CtrlPBuffer<CR>
 
-" Select All
-map <C-a> ggVG
-
 " Copy/paste from system clipboard
 nmap <C-v> "+p
 vmap <C-v> "+p
