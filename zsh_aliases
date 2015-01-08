@@ -1,2 +1,8 @@
+alias rm='rm -rf'
+
+# Git aliases
+alias gd='git diff | vim -'
+alias gdc='git diff --cached | vim -'
+
 alias rmsketch="rm Library/Application\ Support/com.bohemiancoding.sketch3/.sketch3"
 alias dcss='ssh joshua@crawl.akrasiac.org' #pass: joshua
