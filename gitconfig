@@ -16,3 +16,7 @@
 
 [alias]
   conflicts = diff --name-only --diff-filter=U
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true

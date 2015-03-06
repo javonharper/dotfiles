@@ -1,6 +1,10 @@
+alias cp='cp -r'
 alias rm='rm -rf'
+alias mkdir='mkdir -p'
 
 # Git aliases
+alias gs='git status'
+alias gadd='git add -A .'
 alias gd='git diff | vim -'
 alias gdc='git diff --cached | vim -'
 

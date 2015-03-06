@@ -7,7 +7,7 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 export UPDATE_ZSH_DAYS=13
 
-plugins=(git gem git-flow lein npm rails sublime wd)
+plugins=(git gem git-flow lein npm rails sublime wd grunt)
 
 if [[ -a ~/.zshrc_local ]]
 then

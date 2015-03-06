@@ -58,6 +58,7 @@ set ignorecase    " Ignore case when searching
 set smartcase     " Ignore case when lowercase is given
 set hlsearch      " Highlight search things
 set incsearch     " Make search act like search in modern browsers
+nnoremap <leader>* *:AgFromSearch<cr>
 
 " Indenting & Tab Style
 set smartindent    " Smart indent when inserting new line
@@ -95,6 +96,7 @@ noremap <C-p> :bp<CR>
 noremap <C-n> :bn<CR>
 noremap <C-d> :bp\|bd # <CR>
 noremap <Leader>b :CtrlPBuffer<CR>
+noremap <Leader>o :only<CR>
 
 " Copy/paste from system clipboard
 nmap <C-v> "+p
@@ -118,9 +120,6 @@ nmap <Leader>e :e $MYVIMRC<CR>
 
 " Reload vimrc
 nmap <Leader>r :source ~/.vimrc<CR>
-
-" Search
-nmap <Leader>a :Ack
 
 " Hi-light trailing spaces
 nmap <leader>s :%s/\s\+$//<CR>
