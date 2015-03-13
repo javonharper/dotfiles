@@ -4,6 +4,7 @@
 
 [core]
   editor = vim
+	excludesfile = /Users/javon/.gitignore_global
 
 [web]
   browser = google-chrome
@@ -16,7 +17,3 @@
 
 [alias]
   conflicts = diff --name-only --diff-filter=U
-[filter "media"]
-	clean = git media clean %f
-	smudge = git media smudge %f
-	required = true

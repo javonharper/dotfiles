@@ -1,6 +1,7 @@
 alias cp='cp -r'
 alias rm='rm -rf'
 alias mkdir='mkdir -p'
+alias rake='noglob rake'
 
 # Git aliases
 alias gs='git status'
@@ -9,4 +10,6 @@ alias gd='git diff | vim -'
 alias gdc='git diff --cached | vim -'
 
 alias rmsketch="rm Library/Application\ Support/com.bohemiancoding.sketch3/.sketch3"
+alias editlic="vim ~/Library/Application\ Support/com.ynab.YNAB4.LiveCaptive/Local\ Store/.lic"
+
 alias dcss='ssh joshua@crawl.akrasiac.org' #pass: joshua
