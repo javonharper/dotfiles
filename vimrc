@@ -6,6 +6,7 @@ let g:pathogen_disabled = []
 " call add(g:pathogen_disabled, 'vim-supertab')
 call add(g:pathogen_disabled, 'YouCompleteMe')
 call add(g:pathogen_disabled, 'vim-powerline')
+call add(g:pathogen_disabled, 'vim-eunuch')
 
 call pathogen#infect()      " Start pathogen plugin
 call pathogen#helptags()    " Command-t needs it
@@ -58,7 +59,6 @@ set ignorecase    " Ignore case when searching
 set smartcase     " Ignore case when lowercase is given
 set hlsearch      " Highlight search things
 set incsearch     " Make search act like search in modern browsers
-nnoremap <leader>* *:AgFromSearch<cr>
 
 " Indenting & Tab Style
 set smartindent    " Smart indent when inserting new line
@@ -134,7 +134,6 @@ nmap <F1> <Esc>:w<CR>
 nmap <F2> <Esc>:w<CR>
 imap <F2> <Esc>:w<CR>
 vmap <F2> <Esc>:w<CR>
-nmap <F5> :NERDTreeToggle<CR>
 
 """ Command mode mappings
 cmap w!! w !sudo tee % >/dev/null
@@ -143,6 +142,6 @@ cmap w!! w !sudo tee % >/dev/null
 autocmd VimResized * :wincmd =
 
 """ Handle other filetypes
-autocmd BufNewFile,BufRead *.less set ft=css
-autocmd BufNewFile,BufRead *.json set ft=javascript
-autocmd BufNewFile,BufRead *.scaml set ft=haml
+ autocmd BufNewFile,BufRead *.less set ft=css
+ autocmd BufNewFile,BufRead *.json set ft=javascript
+ autocmd BufNewFile,BufRead *.scaml set ft=haml
