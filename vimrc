@@ -124,6 +124,7 @@ nmap <Leader>r :source ~/.vimrc<CR>
 " Hi-light trailing spaces
 nmap <leader>s :%s/\s\+$//<CR>
 
+
 " Open related files in rails
 nmap <leader>C :Econtroller<CR>
 nmap <leader>M :Emodel<CR>
@@ -134,12 +135,16 @@ nmap <F1> <Esc>:w<CR>
 nmap <F2> <Esc>:w<CR>
 imap <F2> <Esc>:w<CR>
 vmap <F2> <Esc>:w<CR>
+nmap <leader>s <Esc>:w<CR>
 
 """ Command mode mappings
 cmap w!! w !sudo tee % >/dev/null
 
 "Rebalance windows on resize
 autocmd VimResized * :wincmd =
+
+" Count dashes in keyword
+" set iskeyword+=-
 
 """ Handle other filetypes
  autocmd BufNewFile,BufRead *.less set ft=css

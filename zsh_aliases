@@ -2,7 +2,7 @@ alias cp='cp -r'
 alias cpkey='cat ~/.ssh/id_rsa.pub | pbcopy'
 alias rm='rm -rf'
 alias mkdir='mkdir -p'
-alias rake='noglob rake'
+alias rake="noglob rake"
 
 # Git aliases
 alias gs='git status'
