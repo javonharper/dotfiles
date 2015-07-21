@@ -1,16 +1,24 @@
+# Alias shell commands
 alias cp='cp -r'
 alias cpkey='cat ~/.ssh/id_rsa.pub | pbcopy'
 alias rm='rm -rf'
 alias mkdir='mkdir -p'
 alias rake="noglob rake"
 
+# Tmux aliases
+alias ta='tmux attach -t'
+alias ts='tmux new-session -s'
+alias td='tmux detach'
+alias tl='tmux list-sessions'
+
 # Git aliases
 alias gs='git status'
-alias gadd='git add -A .'
+alias ga='ga .'
 alias gd='git diff | vim -'
 alias gdc='git diff --cached | vim -'
+alias git-publish='git push --all -u'
+alias git-root='cd "$(git rev-parse --show-toplevel)"'
 
-alias rmsketch="rm Library/Application\ Support/com.bohemiancoding.sketch3/.sketch3"
+# ;)
 alias editlic="vim ~/Library/Application\ Support/com.ynab.YNAB4.LiveCaptive/Local\ Store/.lic"
-
 alias dcss='ssh joshua@crawl.akrasiac.org' #pass: joshua

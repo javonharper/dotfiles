@@ -74,6 +74,15 @@ let g:mapleader=','
 let g:maplocalleader=','
 
 """ Personal bindings
+" use v to continually select character, word, block
+" vmap v <Plug>(expand_region_expand)
+" vmap <C-v> <Plug>(expand_region_shrink)
+
+" Jump to end of block copied and pasted
+" vnoremap <silent> y y`]
+" vnoremap <silent> p p`]
+" nnoremap <silent> p p`]
+
 " Center screen when searching
 map N Nzz
 map n nzz
@@ -98,6 +107,11 @@ noremap <C-d> :bp\|bd # <CR>
 noremap <Leader>b :CtrlPBuffer<CR>
 noremap <Leader>o :only<CR>
 
+" Better search replace
+noremap <silent> s //e<C-r>=&selection=='exclusive'?'+1':''<CR><CR>
+    \:<C-u>call histdel('search',-1)<Bar>let @/=histget('search',-1)<CR>gv
+omap s :normal vs<CR>
+
 " Copy/paste from system clipboard
 nmap <C-v> "+p
 vmap <C-v> "+p
@@ -105,15 +119,11 @@ nmap <C-c> "+y
 vmap <C-c> "+y
 
 """ Mapping Leader Keys
-" Comment
 nmap <Leader>c :TComment<CR>
 vmap <Leader>c :TComment<CR>
 
 " Open file finder
 nmap <Leader>t :CtrlP<CR>
-
-" Jump to cucumber step definition
-nmap <Leader>d <C-]>
 
 " Edit vimrc
 nmap <Leader>e :e $MYVIMRC<CR>
@@ -123,7 +133,6 @@ nmap <Leader>r :source ~/.vimrc<CR>
 
 " Hi-light trailing spaces
 nmap <leader>s :%s/\s\+$//<CR>
-
 
 " Open related files in rails
 nmap <leader>C :Econtroller<CR>
@@ -142,9 +151,6 @@ cmap w!! w !sudo tee % >/dev/null
 
 "Rebalance windows on resize
 autocmd VimResized * :wincmd =
-
-" Count dashes in keyword
-" set iskeyword+=-
 
 """ Handle other filetypes
  autocmd BufNewFile,BufRead *.less set ft=css
