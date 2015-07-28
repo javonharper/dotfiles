@@ -1,8 +1,5 @@
 #!/bin/bash
 
-mkdir -p $HOME/Misc/Apps
-mkdir -p $HOME/Misc/Binaries
-
 # shell & emulator config
 ln -sf $PWD/bashrc $HOME/.bashrc
 ln -sf $PWD/zshrc $HOME/.zshrc
