@@ -6,10 +6,11 @@ alias mkdir='mkdir -p'
 alias rake="noglob rake"
 
 # Tmux aliases
-alias ta='tmux attach -t'
 alias ts='tmux new-session -s'
+alias ta='tmux attach -t'
 alias td='tmux detach'
 alias tl='tmux list-sessions'
+alias tk='tmux kill-sesssion -t'
 
 # Git aliases
 alias gs='git status'
