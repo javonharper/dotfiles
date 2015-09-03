@@ -10,14 +10,13 @@
   browser = google-chrome
 
 [push]
-  default = matching
+  default = simple
 
 [color]
 	ui = true
 
 [alias]
   conflicts = diff --name-only --diff-filter=U
-  publish = push --all -u
   remove = push --delete origin
   
 [filter "lfs"]
