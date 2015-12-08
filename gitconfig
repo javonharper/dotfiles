@@ -2,19 +2,19 @@
   name = Javon Harper
   email = javon.d.harper@gmail.com
 
-[core]
-  editor = vim
-	excludesfile = /Users/javon/.gitignore_global
-
-[web]
-  browser = google-chrome
-
-[push]
-  default = simple
-
-[color]
-	ui = true
-
 [alias]
   conflicts = diff --name-only --diff-filter=U
   remove = push --delete origin
+
+[color]
+	ui = auto
+
+[commit]
+  template = ~/.gitmessage
+
+[core]
+  editor = vim
+	excludesfile = ~/.gitignore
+
+[push]
+  default = current
