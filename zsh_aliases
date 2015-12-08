@@ -23,3 +23,4 @@ alias git-root='cd "$(git rev-parse --show-toplevel)"'
 # ;)
 alias editlic="vim ~/Library/Application\ Support/com.ynab.YNAB4.LiveCaptive/Local\ Store/.lic"
 alias dcss='ssh joshua@crawl.akrasiac.org' #pass: joshua
+alias open-popcorntime='open $TMPDIR/Popcorn-Time'
