@@ -12,6 +12,3 @@ ln -sf $PWD/gitignore $HOME/.gitignore_global
 # vim config
 ln -sf $PWD/vimrc $HOME/.vimrc
 ln -sf $PWD/gvimrc $HOME/.gvimrc
-ln -sf $PWD/vim $HOME/.vim
-
-git submodule update --init --recursive
