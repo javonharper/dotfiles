@@ -12,3 +12,6 @@ ln -sf $PWD/gitignore $HOME/.gitignore_global
 # vim config
 ln -sf $PWD/vimrc $HOME/.vimrc
 ln -sf $PWD/gvimrc $HOME/.gvimrc
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
