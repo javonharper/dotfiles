@@ -1,0 +1,32 @@
+# Unix
+alias ll="ls -al"
+alias cp="cp -r"
+alias rm="rm -rf"
+alias mkdir="mkdir -p"
+
+alias cpkey="cat ~/.ssh/id_rsa.pub | pbcopy"
+
+# Tmux
+alias ts="tmux new-session -s"
+alias ta="tmux attach -t"
+alias td="tmux detach"
+alias tls="tmux list-sessions"
+alias tks="tmux kill-session -t"
+
+# Git
+alias gs="git status"
+alias ga="ga ."
+alias gd="git diff | vim -"
+alias gdc="git diff --cached | vim -"
+
+# Bundler
+alias bi="bundle install"
+alias bu="bundle update"
+
+# Rails
+alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
+
+# ;)
+alias dcss="ssh joshua@crawl.akrasiac.org" # pass: joshua
+alias editlic="vim ~/Library/Application\ Support/com.ynab.YNAB4.LiveCaptive/Local\ Store/.lic"
+alias open-popcorntime="open $TMPDIR/Popcorn-Time"

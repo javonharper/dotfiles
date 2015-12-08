@@ -14,9 +14,9 @@ then
     source ~/.zshrc_local
 fi
 
-if [[ -a ~/.zsh_aliases ]]
+if [[ -a ~/.aliases ]]
 then
-    source ~/.zsh_aliases
+    source ~/.aliases
 fi
 
 export PATH="/Users/javon/Misc/Binaries:/usr/local/heroku/bin:/Users/javon/.rvm/gems/ruby-1.9.3-p484/bin:/Users/javon/.rvm/gems/ruby-1.9.3-p484@global/bin:/Users/javon/.rvm/rubies/ruby-1.9.3-p484/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/javon/.rvm/bin:/Users/javon/Binary:/Users/javon/.rvm/bin"
