@@ -18,8 +18,3 @@
 [alias]
   conflicts = diff --name-only --diff-filter=U
   remove = push --delete origin
-  
-[filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
-	required = true
