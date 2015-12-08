@@ -16,12 +16,6 @@ set t_Co=256                 " For colorschemes
 set background=dark
 colorscheme solarized
 
-" Powerline Config
-let g:Powerline_symbols = 'fancy'
-set encoding=utf-8
-set fillchars+=stl:\ ,stlnc:\
-set laststatus=2
-
 " Clipboard
 set clipboard=unnamed
 
@@ -122,17 +116,3 @@ autocmd VimResized * :wincmd =
 """ Handle other filetypes
 autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead *.axlsx set ft=ruby
- 
-" Create directories when writing a file
-" function s:MkNonExDir(file, buf)
-"   if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
-"     let dir=fnamemodify(a:file, ':h')
-"     if !isdirectory(dir)
-"       call mkdir(dir, 'p')
-"     endif
-"   endif
-" endfunction
-" augroup BWCCreateDir
-"   autocmd!
-"   autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
-" augroup END

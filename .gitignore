@@ -1,4 +1,2 @@
-*.sw?
-*.~
 vim/vim
 .netrwhist
