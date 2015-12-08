@@ -27,6 +27,8 @@ set cursorline    " Shows current line highlighted
 set showcmd       " Show incomplete commands
 set showmode      " Show mode I'm in
 set showmatch     " Show matching bracets when text indicator is over them
+" Make it obvious where 80 characters is
+let &colorcolumn=join(range(81,999),",")
 
 " Buffer management
 set hidden      " Handle multiple buffers better.

@@ -1,4 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
+export EDITOR=vim
 
 ZSH_THEME="simple"
 
@@ -7,11 +8,11 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 export UPDATE_ZSH_DAYS=13
 
-plugins=(git gem git-flow lein npm rails sublime wd grunt)
+plugins=(git gem git-flow npm rails)
 
-if [[ -a ~/.zshrc_local ]]
+if [[ -a ~/.zshrc.local ]]
 then
-    source ~/.zshrc_local
+    source ~/.zshrc.local
 fi
 
 if [[ -a ~/.aliases ]]
@@ -24,4 +25,3 @@ export PATH=/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH
 . /Users/javon/.bin/z.sh
 
 source $ZSH/oh-my-zsh.sh
-
