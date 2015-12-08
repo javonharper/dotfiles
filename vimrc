@@ -1,14 +1,22 @@
 set nocompatible
+filetype off
 
-" Disable some plugins temporarily
-let g:pathogen_disabled = []
-" call add(g:pathogen_disabled, 'pluginname')
-call add(g:pathogen_disabled, 'YouCompleteMe')
-call add(g:pathogen_disabled, 'vim-powerline')
-call add(g:pathogen_disabled, 'vim-eunuch')
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-call pathogen#infect()      " Start pathogen plugin
-call pathogen#helptags()    " Command-t needs it
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'rking/ag.vim'
+Plugin 'tpope/vim-eunuch'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tmhedberg/matchit'
+Plugin 'tpope/vim-endwise'
+Plugin 'Townk/vim-autoclose'
+
+call vundle#end()
 
 syntax enable                " Enables syntax highlighting
 filetype plugin indent on    " Recognize filetype
@@ -116,5 +124,4 @@ cmap w!! w !sudo tee % >/dev/null
 autocmd VimResized * :wincmd =
 
 """ Handle other filetypes
-autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead *.axlsx set ft=ruby
