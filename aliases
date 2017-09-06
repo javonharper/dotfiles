@@ -29,4 +29,3 @@ alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 # ;)
 alias dcss="ssh joshua@crawl.akrasiac.org" # pass: joshua
 alias editlic="vim ~/Library/Application\ Support/com.ynab.YNAB4.LiveCaptive/Local\ Store/.lic"
-alias open-popcorntime="open $TMPDIR/Popcorn-Time"
