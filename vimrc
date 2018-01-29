@@ -4,17 +4,46 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" Colorscheme
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'rking/ag.vim'
-Plugin 'tpope/vim-eunuch'
+
+" Fuzzy finder
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-surround'
+
+" Comment support
+Plugin 'tomtom/tcomment_vim'
+
+" Move with style
+Plugin 'Lokaltog/vim-easymotion'
+
+" Git support
+Plugin 'tpope/vim-fugitive'
+
+" Jump to matching symbols
 Plugin 'tmhedberg/matchit'
-Plugin 'tpope/vim-endwise'
-Plugin 'Townk/vim-autoclose'
+
+" Search within files
+Plugin 'rking/ag.vim'
+
+" Javascript syntax
+Plugin 'pangloss/vim-javascript'
+
+" Riotjs syntax
+Plugin 'ryym/vim-riot'
+
+" Autocomplete support
+Plugin 'Valloric/YouCompleteMe'
+
+" Snippet support
+Plugin 'SirVer/ultisnips'
+
+" JSX syntax
+Plugin 'mxw/vim-jsx'
+
+" Close html/jsx tags
+Plugin 'alvan/vim-closetag'
+
+" Plugin 'prettier/vim-prettier'
 
 call vundle#end()
 
@@ -105,6 +134,12 @@ vmap <Leader>c :TComment<CR>
 " Open file finder
 nmap <Leader>t :CtrlP<CR>
 
+" Trigger Ultisnips
+let g:UltiSnipsExpandTrigger="<c-l>"                                            
+let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"   
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+
 " Edit vimrc
 nmap <Leader>e :e $MYVIMRC<CR>
 
@@ -125,3 +160,9 @@ autocmd VimResized * :wincmd =
 
 """ Handle other filetypes
 autocmd BufNewFile,BufRead *.axlsx set ft=ruby
+
+""" Allow .js files to be jsx highlighted
+let g:jsx_ext_required = 0
+
+let g:closetag_filenames = "*.html,*.php,*.jsx,*.js,*.tag"
+

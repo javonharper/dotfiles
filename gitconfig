@@ -13,8 +13,8 @@
   template = ~/.gitmessage
 
 [core]
-  editor = vim
-	excludesfile = ~/.gitignore
+  editor = vim 
+	excludesfile = /Users/javon/.gitignore_global
 
 [push]
   default = current
