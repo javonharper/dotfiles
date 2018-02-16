@@ -10,6 +10,9 @@ Plugin 'altercation/vim-colors-solarized'
 " Fuzzy finder
 Plugin 'ctrlpvim/ctrlp.vim'
 
+" Search within files
+Plugin 'rking/ag.vim'
+
 " Comment support
 Plugin 'tomtom/tcomment_vim'
 
@@ -22,14 +25,8 @@ Plugin 'tpope/vim-fugitive'
 " Jump to matching symbols
 Plugin 'tmhedberg/matchit'
 
-" Search within files
-Plugin 'rking/ag.vim'
-
 " Javascript syntax
 Plugin 'pangloss/vim-javascript'
-
-" Riotjs syntax
-Plugin 'ryym/vim-riot'
 
 " Autocomplete support
 Plugin 'Valloric/YouCompleteMe'
@@ -43,7 +40,9 @@ Plugin 'mxw/vim-jsx'
 " Close html/jsx tags
 Plugin 'alvan/vim-closetag'
 
-" Plugin 'prettier/vim-prettier'
+" [Testing] Autoformat code
+Plugin 'prettier/vim-prettier'
+
 
 call vundle#end()
 
@@ -164,5 +163,34 @@ autocmd BufNewFile,BufRead *.axlsx set ft=ruby
 """ Allow .js files to be jsx highlighted
 let g:jsx_ext_required = 0
 
-let g:closetag_filenames = "*.html,*.php,*.jsx,*.js,*.tag"
+""" Close tags for associated filetypes
+let g:closetag_filenames = "*.html,*.jsx,*.js"
 
+
+""" Prettier settings
+" max line lengh that prettier will wrap on
+let g:prettier#config#print_width = 80
+
+" number of spaces per indentation level
+let g:prettier#config#tab_width = 2
+
+" use tabs over spaces
+let g:prettier#config#use_tabs = 'false'
+
+" print semicolons
+let g:prettier#config#semi = 'false'
+
+" single quotes over double quotes
+let g:prettier#config#single_quote = 'true'
+
+" print spaces between brackets
+let g:prettier#config#bracket_spacing = 'true'
+
+" put > on the last line instead of new line
+let g:prettier#config#jsx_bracket_same_line = 'false'
+
+" none|es5|all
+let g:prettier#config#trailing_comma = 'all'
+
+" flow|babylon|typescript|postcss
+let g:prettier#config#parser = 'flow'
