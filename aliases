@@ -7,6 +7,7 @@ alias mkdir="mkdir -p"
 alias cpkey="cat ~/.ssh/id_rsa.pub | pbcopy"
 
 # Tmux
+alias mux='tmuxinator'
 alias ts="tmux new-session -s"
 alias ta="tmux attach -t"
 alias td="tmux detach"
@@ -19,11 +20,9 @@ alias ga="ga ."
 alias gd="git diff | vim -"
 alias gdc="git diff --cached | vim -"
 
-# Bundler
+# Rails
 alias bi="bundle install"
 alias bu="bundle update"
-
-# Rails
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 
 # ;)

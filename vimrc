@@ -43,6 +43,8 @@ Plugin 'alvan/vim-closetag'
 " [Testing] Autoformat code
 Plugin 'prettier/vim-prettier'
 
+Plugin 'lambdatoast/elm.vim'
+
 
 call vundle#end()
 
