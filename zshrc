@@ -1,23 +1,26 @@
 export EDITOR=vim
+export ZSH="/Users/javon/.oh-my-zsh"
 
 ZSH_THEME="simple"
 
-DISABLE_AUTO_UPDATE="true"
-ENABLE_CORRECTION="true"
-COMPLETION_WAITING_DOTS="true"
-export UPDATE_ZSH_DAYS=13
-
-plugins=(git)
-
-if [[ -a ~/.zshrc.local ]]
-then
-    source ~/.zshrc.local
-fi
+plugins=(
+  git
+)
 
 if [[ -a ~/.aliases ]]
 then
-    source ~/.aliases
+  source ~/.aliases
 fi
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH=/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH
+export PATH="$PATH:$HOME/.rvm/bin"
+
+source $ZSH/oh-my-zsh.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/javon/Development/iopipe/graphql-api/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/javon/Development/iopipe/graphql-api/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/javon/Development/iopipe/graphql-api/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/javon/Development/iopipe/graphql-api/node_modules/tabtab/.completions/sls.zsh

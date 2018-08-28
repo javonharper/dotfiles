@@ -1,5 +1,5 @@
 # Unix
-alias ll="ls -al"
+alias ll="ls -FGlahp"
 alias cp="cp -r"
 alias rm="rm -rf"
 alias mkdir="mkdir -p"
@@ -17,6 +17,7 @@ alias tks="tmux kill-session -t"
 # Git
 alias gs="git status"
 alias ga="ga ."
+alias gbc='git checkout -b'
 alias gd="git diff | vim -"
 alias gdc="git diff --cached | vim -"
 

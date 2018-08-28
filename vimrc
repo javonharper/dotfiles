@@ -29,10 +29,10 @@ Plugin 'tmhedberg/matchit'
 Plugin 'pangloss/vim-javascript'
 
 " Autocomplete support
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 " Snippet support
-Plugin 'SirVer/ultisnips'
+" Plugin 'SirVer/ultisnips'
 
 " JSX syntax
 Plugin 'mxw/vim-jsx'
@@ -43,7 +43,7 @@ Plugin 'alvan/vim-closetag'
 " [Testing] Autoformat code
 Plugin 'prettier/vim-prettier'
 
-Plugin 'lambdatoast/elm.vim'
+" Plugin 'lambdatoast/elm.vim'
 
 
 call vundle#end()
@@ -110,22 +110,24 @@ let g:maplocalleader=','
 map N Nzz
 map n nzz
 
-""" Remapping ShiftKeys
+""" Remapping Shift Keys
 noremap U :redo<CR>
-noremap H :nohl<CR>
 noremap Y y$
 nmap K 0D
 
-""" Mapping CtrlKeys
+""" Mapping Control Keys
 " Better movement between windows
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
+" Undo Ctrl P
+map <C-p> <Nop>
+
 " Better buffer movement
-noremap <C-p> :bp<CR>
-noremap <C-n> :bn<CR>
+noremap H :bp<CR>
+noremap L :bn<CR>
 noremap <C-d> :bp\|bd # <CR>
 
 """ Mapping Leader Keys
@@ -171,28 +173,26 @@ let g:closetag_filenames = "*.html,*.jsx,*.js"
 
 """ Prettier settings
 " max line lengh that prettier will wrap on
-let g:prettier#config#print_width = 80
+" let g:prettier#config#print_width = 80
 
 " number of spaces per indentation level
-let g:prettier#config#tab_width = 2
+" let g:prettier#config#tab_width = 2
 
-" use tabs over spaces
-let g:prettier#config#use_tabs = 'false'
+" use tabs over spaces?
+" let g:prettier#config#use_tabs = 'false'
 
-" print semicolons
-let g:prettier#config#semi = 'false'
+" print semicolons?
+" let g:prettier#config#semi = 'false'
 
-" single quotes over double quotes
+" use single quotes ? 
 let g:prettier#config#single_quote = 'true'
 
-" print spaces between brackets
+" print spaces between brackets?
 let g:prettier#config#bracket_spacing = 'true'
 
-" put > on the last line instead of new line
+" put > on the last line instead of new line?
 let g:prettier#config#jsx_bracket_same_line = 'false'
 
 " none|es5|all
-let g:prettier#config#trailing_comma = 'all'
-
-" flow|babylon|typescript|postcss
-let g:prettier#config#parser = 'flow'
+" let g:prettier#config#trailing_comma = 'all'
+let g:prettier#config#trailing_comma = 'none'
