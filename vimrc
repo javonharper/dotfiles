@@ -29,7 +29,7 @@ Plugin 'tmhedberg/matchit'
 Plugin 'pangloss/vim-javascript'
 
 " Autocomplete support
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 " Snippet support
 " Plugin 'SirVer/ultisnips'
@@ -40,11 +40,8 @@ Plugin 'mxw/vim-jsx'
 " Close html/jsx tags
 Plugin 'alvan/vim-closetag'
 
-" [Testing] Autoformat code
+" Autoformat code
 Plugin 'prettier/vim-prettier'
-
-" Plugin 'lambdatoast/elm.vim'
-
 
 call vundle#end()
 
@@ -170,21 +167,20 @@ let g:jsx_ext_required = 0
 """ Close tags for associated filetypes
 let g:closetag_filenames = "*.html,*.jsx,*.js"
 
-
 """ Prettier settings
 " max line lengh that prettier will wrap on
-" let g:prettier#config#print_width = 80
+let g:prettier#config#print_width = 80
 
 " number of spaces per indentation level
-" let g:prettier#config#tab_width = 2
+let g:prettier#config#tab_width = 2
 
 " use tabs over spaces?
-" let g:prettier#config#use_tabs = 'false'
+let g:prettier#config#use_tabs = 'false'
 
 " print semicolons?
 " let g:prettier#config#semi = 'false'
 
-" use single quotes ? 
+" use single quotes? 
 let g:prettier#config#single_quote = 'true'
 
 " print spaces between brackets?
@@ -196,3 +192,6 @@ let g:prettier#config#jsx_bracket_same_line = 'false'
 " none|es5|all
 " let g:prettier#config#trailing_comma = 'all'
 let g:prettier#config#trailing_comma = 'none'
+
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.json,*.css PrettierAsync

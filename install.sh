@@ -1,5 +1,7 @@
 #!/bin/bash
 
+touch ~/.hushlogin
+
 # shell & emulator config
 ln -sf $PWD/bashrc $HOME/.bashrc
 ln -sf $PWD/zshrc $HOME/.zshrc

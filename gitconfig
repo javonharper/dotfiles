@@ -17,4 +17,4 @@
 	excludesfile = /Users/javon/.gitignore_global
 
 [push]
-  default = current
+	default = current
