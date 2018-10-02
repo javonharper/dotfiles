@@ -31,9 +31,6 @@ Plugin 'pangloss/vim-javascript'
 " Autocomplete support
 Plugin 'Valloric/YouCompleteMe'
 
-" Snippet support
-" Plugin 'SirVer/ultisnips'
-
 " JSX syntax
 Plugin 'mxw/vim-jsx'
 
