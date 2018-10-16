@@ -63,6 +63,7 @@ set showmatch     " Show matching bracets when text indicator is over them
 let &colorcolumn=join(range(81,999),",")
 
 " Buffer management
+set ls=2
 set hidden      " Handle multiple buffers better.
 set splitright  " vs splits new window to east
 set autowrite   " Save files when switching buffer
@@ -191,4 +192,4 @@ let g:prettier#config#jsx_bracket_same_line = 'false'
 let g:prettier#config#trailing_comma = 'none'
 
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.json,*.css PrettierAsync
+" autocmd BufWritePre *.js,*.jsx,*.json,*.css PrettierAsync
