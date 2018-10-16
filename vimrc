@@ -7,29 +7,30 @@ call vundle#begin()
 " Colorscheme
 Plugin 'altercation/vim-colors-solarized'
 
-" Fuzzy finder
+" Fuzzy file finder
 Plugin 'ctrlpvim/ctrlp.vim'
 
-" Search within files
+" Search text within files
 Plugin 'rking/ag.vim'
 
-" Comment support
+" Comments
 Plugin 'tomtom/tcomment_vim'
 
 " Move with style
 Plugin 'Lokaltog/vim-easymotion'
 
-" Git support
+" Git
 Plugin 'tpope/vim-fugitive'
 
 " Jump to matching symbols
 Plugin 'tmhedberg/matchit'
 
-" Javascript syntax
-Plugin 'pangloss/vim-javascript'
+" Autocomplete
+" Plugin 'Valloric/YouCompleteMe'
 
-" Autocomplete support
-Plugin 'Valloric/YouCompleteMe'
+"" Syntax
+"  Javascript
+Plugin 'pangloss/vim-javascript'
 
 " JSX syntax
 Plugin 'mxw/vim-jsx'
@@ -48,23 +49,20 @@ set t_Co=256                 " For colorschemes
 set background=dark
 colorscheme solarized
 
-" Clipboard
-set clipboard=unnamed
-
 " Interface
 set number        " Line numbers
 set nowrap        " Turn off line wrapping
-set ruler         " Linenum, colnum displays
 set cursorline    " Shows current line highlighted
 set showcmd       " Show incomplete commands
-set showmode      " Show mode I'm in
+set showmode      " Show current mode (INSERT, VISUAL, etc)
 set showmatch     " Show matching bracets when text indicator is over them
+
 " Make it obvious where 80 characters is
 let &colorcolumn=join(range(81,999),",")
 
 " Buffer management
-set ls=2
-set hidden      " Handle multiple buffers better.
+set ls=2        " Show current file at all times
+set hidden      " Handle multiple buffers better
 set splitright  " vs splits new window to east
 set autowrite   " Save files when switching buffer
 
@@ -96,7 +94,7 @@ set expandtab      " Insert space characters whenever the tab key is pressed
 set tabstop=2      " Control the number of space characters that will be inserted when the tab key is pressed
 set shiftwidth=2   " Change the number of space characters inserted for indentation
 
-" Re map leader
+" Re-map leader
 let mapleader=","
 let g:mapleader=','
 let g:maplocalleader=','
@@ -110,6 +108,10 @@ noremap U :redo<CR>
 noremap Y y$
 nmap K 0D
 
+" Better buffer movement
+noremap H :bp<CR>
+noremap L :bn<CR>
+
 """ Mapping Control Keys
 " Better movement between windows
 nmap <C-h> <C-w>h
@@ -120,23 +122,12 @@ nmap <C-l> <C-w>l
 " Undo Ctrl P
 map <C-p> <Nop>
 
-" Better buffer movement
-noremap H :bp<CR>
-noremap L :bn<CR>
-noremap <C-d> :bp\|bd # <CR>
-
 """ Mapping Leader Keys
 nmap <Leader>c :TComment<CR>
 vmap <Leader>c :TComment<CR>
 
 " Open file finder
 nmap <Leader>t :CtrlP<CR>
-
-" Trigger Ultisnips
-let g:UltiSnipsExpandTrigger="<c-l>"                                            
-let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"   
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 
 " Edit vimrc
 nmap <Leader>e :e $MYVIMRC<CR>
@@ -146,18 +137,12 @@ nmap <Leader>r :source ~/.vimrc<CR>
 
 """ Mapping FKeys
 nmap <F1> <Esc>:w<CR>
-nmap <F2> <Esc>:w<CR>
-imap <F2> <Esc>:w<CR>
-vmap <F2> <Esc>:w<CR>
 
 """ Command mode mappings
 cmap w!! w !sudo tee % >/dev/null
 
 "Rebalance windows on resize
 autocmd VimResized * :wincmd =
-
-""" Handle other filetypes
-autocmd BufNewFile,BufRead *.axlsx set ft=ruby
 
 """ Allow .js files to be jsx highlighted
 let g:jsx_ext_required = 0
@@ -166,30 +151,11 @@ let g:jsx_ext_required = 0
 let g:closetag_filenames = "*.html,*.jsx,*.js"
 
 """ Prettier settings
-" max line lengh that prettier will wrap on
+nmap ; <Plug>(Prettier)
 let g:prettier#config#print_width = 80
-
-" number of spaces per indentation level
 let g:prettier#config#tab_width = 2
-
-" use tabs over spaces?
 let g:prettier#config#use_tabs = 'false'
-
-" print semicolons?
-" let g:prettier#config#semi = 'false'
-
-" use single quotes? 
 let g:prettier#config#single_quote = 'true'
-
-" print spaces between brackets?
 let g:prettier#config#bracket_spacing = 'true'
-
-" put > on the last line instead of new line?
 let g:prettier#config#jsx_bracket_same_line = 'false'
-
-" none|es5|all
-" let g:prettier#config#trailing_comma = 'all'
 let g:prettier#config#trailing_comma = 'none'
-
-let g:prettier#autoformat = 0
-" autocmd BufWritePre *.js,*.jsx,*.json,*.css PrettierAsync
