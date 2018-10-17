@@ -5,7 +5,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Colorscheme
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'altercation/vim-colors-solarized'
+Plugin 'arcticicestudio/nord-vim'
 
 " Fuzzy file finder
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -47,7 +48,8 @@ syntax enable                " Enables syntax highlighting
 filetype plugin indent on    " Recognize filetype
 set t_Co=256                 " For colorschemes
 set background=dark
-colorscheme solarized
+
+colorscheme nord
 
 " Interface
 set number        " Line numbers
@@ -58,7 +60,7 @@ set showmode      " Show current mode (INSERT, VISUAL, etc)
 set showmatch     " Show matching bracets when text indicator is over them
 
 " Make it obvious where 80 characters is
-let &colorcolumn=join(range(81,999),",")
+" let &colorcolumn=join(range(81,999),",")
 
 " Buffer management
 set ls=2        " Show current file at all times
