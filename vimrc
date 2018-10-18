@@ -4,9 +4,22 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Colorscheme
-" Plugin 'altercation/vim-colors-solarized'
+" Colorschemes
+
+Plugin 'pbrisbin/vim-colors-off'
+
+Plugin 'andreypopp/vim-colors-plain'
+
+Plugin 'altercation/vim-colors-solarized'
+
 Plugin 'arcticicestudio/nord-vim'
+
+Plugin 'owickstrom/vim-colors-paramount'
+
+Plugin 'reedes/vim-colors-pencil'
+
+Plugin 'javonharper/fortress-vim'
+
 
 " Fuzzy file finder
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -49,7 +62,7 @@ filetype plugin indent on    " Recognize filetype
 set t_Co=256                 " For colorschemes
 set background=dark
 
-colorscheme nord
+colorscheme fortress
 
 " Interface
 set number        " Line numbers
@@ -59,14 +72,11 @@ set showcmd       " Show incomplete commands
 set showmode      " Show current mode (INSERT, VISUAL, etc)
 set showmatch     " Show matching bracets when text indicator is over them
 
-" Make it obvious where 80 characters is
-" let &colorcolumn=join(range(81,999),",")
-
 " Buffer management
-set ls=2        " Show current file at all times
-set hidden      " Handle multiple buffers better
-set splitright  " vs splits new window to east
-set autowrite   " Save files when switching buffer
+set laststatus=2 " Show current file at all times
+set hidden       " Handle multiple buffers better
+set splitright   " vs splits new window to east
+set autowrite    " Save files when switching buffer
 
 " Bash-like completion
 set wildmenu                                     " Status line for vim
@@ -105,7 +115,6 @@ let g:maplocalleader=','
 map N Nzz
 map n nzz
 
-""" Remapping Shift Keys
 noremap U :redo<CR>
 noremap Y y$
 nmap K 0D
@@ -113,22 +122,19 @@ nmap K 0D
 " Better buffer movement
 noremap H :bp<CR>
 noremap L :bn<CR>
+noremap <Leader> :bd<CR>
 
-""" Mapping Control Keys
 " Better movement between windows
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-" Undo Ctrl P
-map <C-p> <Nop>
-
-""" Mapping Leader Keys
 nmap <Leader>c :TComment<CR>
 vmap <Leader>c :TComment<CR>
 
 " Open file finder
+map <C-p> <Nop>
 nmap <Leader>t :CtrlP<CR>
 
 " Edit vimrc
@@ -137,7 +143,7 @@ nmap <Leader>e :e $MYVIMRC<CR>
 " Reload vimrc
 nmap <Leader>r :source ~/.vimrc<CR>
 
-""" Mapping FKeys
+" Save with F1
 nmap <F1> <Esc>:w<CR>
 
 """ Command mode mappings
@@ -153,7 +159,6 @@ let g:jsx_ext_required = 0
 let g:closetag_filenames = "*.html,*.jsx,*.js"
 
 """ Prettier settings
-nmap ; <Plug>(Prettier)
 let g:prettier#config#print_width = 80
 let g:prettier#config#tab_width = 2
 let g:prettier#config#use_tabs = 'false'
