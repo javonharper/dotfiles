@@ -6,20 +6,7 @@ call vundle#begin()
 
 " Colorschemes
 
-Plugin 'pbrisbin/vim-colors-off'
-
-Plugin 'andreypopp/vim-colors-plain'
-
-Plugin 'altercation/vim-colors-solarized'
-
-Plugin 'arcticicestudio/nord-vim'
-
-Plugin 'owickstrom/vim-colors-paramount'
-
-Plugin 'reedes/vim-colors-pencil'
-
 Plugin 'javonharper/fortress-vim'
-
 
 " Fuzzy file finder
 Plugin 'ctrlpvim/ctrlp.vim'
