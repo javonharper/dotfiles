@@ -3,6 +3,7 @@ alias ll="ls -FGlahp"
 alias cp="cp -r"
 alias rm="rm -rf"
 alias mkdir="mkdir -p"
+alias tree="tree -I 'node_modules|cache|test_*'"
 
 alias cpkey="cat ~/.ssh/id_rsa.pub | pbcopy"
 

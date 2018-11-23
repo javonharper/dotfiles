@@ -27,7 +27,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tmhedberg/matchit'
 
 " Autocomplete
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 "" Syntax
 "  Javascript
@@ -93,6 +93,9 @@ set expandtab      " Insert space characters whenever the tab key is pressed
 set tabstop=2      " Control the number of space characters that will be inserted when the tab key is pressed
 set shiftwidth=2   " Change the number of space characters inserted for indentation
 
+" Make it obvious where 80 characters is
+let &colorcolumn=join(range(81,999),",")
+
 " Re-map leader
 let mapleader=","
 let g:mapleader=','
@@ -109,7 +112,6 @@ nmap K 0D
 " Better buffer movement
 noremap H :bp<CR>
 noremap L :bn<CR>
-noremap <Leader> :bd<CR>
 
 " Better movement between windows
 nmap <C-h> <C-w>h
@@ -146,10 +148,19 @@ let g:jsx_ext_required = 0
 let g:closetag_filenames = "*.html,*.jsx,*.js"
 
 """ Prettier settings
+let g:prettier#autoformat = 0
+" autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css, PrettierAsync
 let g:prettier#config#print_width = 80
 let g:prettier#config#tab_width = 2
 let g:prettier#config#use_tabs = 'false'
+let g:prettier#config#semi = 'true'
 let g:prettier#config#single_quote = 'true'
 let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#jsx_bracket_same_line = 'false'
+let g:prettier#config#arrow_parens = 'avoid'
 let g:prettier#config#trailing_comma = 'none'
+
+""" Get highlight group under cursor
+nnoremap <f10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+      \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+      \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
