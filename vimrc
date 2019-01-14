@@ -5,7 +5,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Colorschemes
-
 Plugin 'javonharper/fortress-vim'
 
 " Fuzzy file finder
@@ -30,11 +29,10 @@ Plugin 'tmhedberg/matchit'
 Plugin 'Valloric/YouCompleteMe'
 
 "" Syntax
-"  Javascript
+Plugin 'leafgarland/typescript-vim'
 Plugin 'pangloss/vim-javascript'
-
-" JSX syntax
 Plugin 'mxw/vim-jsx'
+Plugin 'posva/vim-vue'
 
 " Close html/jsx tags
 Plugin 'alvan/vim-closetag'
@@ -94,7 +92,7 @@ set tabstop=2      " Control the number of space characters that will be inserte
 set shiftwidth=2   " Change the number of space characters inserted for indentation
 
 " Make it obvious where 80 characters is
-let &colorcolumn=join(range(81,999),",")
+" let &colorcolumn=join(range(81,999),",")
 
 " Re-map leader
 let mapleader=","
@@ -134,6 +132,9 @@ nmap <Leader>r :source ~/.vimrc<CR>
 
 " Save with F1
 nmap <F1> <Esc>:w<CR>
+nmap <F2> <Esc>:w<CR>
+nmap <F3> <Esc>:w<CR>
+nmap <F12> <Esc>:bd<CR>
 
 """ Command mode mappings
 cmap w!! w !sudo tee % >/dev/null
@@ -149,7 +150,7 @@ let g:closetag_filenames = "*.html,*.jsx,*.js"
 
 """ Prettier settings
 let g:prettier#autoformat = 0
-" autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css, PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.json PrettierAsync
 let g:prettier#config#print_width = 80
 let g:prettier#config#tab_width = 2
 let g:prettier#config#use_tabs = 'false'

@@ -5,13 +5,11 @@ alias rm="rm -rf"
 alias mkdir="mkdir -p"
 alias tree="tree -I 'node_modules|cache|test_*'"
 
-alias cpkey="cat ~/.ssh/id_rsa.pub | pbcopy"
-
 # Tmux
 alias mux='tmuxinator'
-alias ts="tmux new-session -s"
-alias ta="tmux attach -t"
-alias td="tmux detach"
+alias tns="tmux new-session -s"
+alias tas="tmux attach -t"
+alias tds="tmux detach"
 alias tls="tmux list-sessions"
 alias tks="tmux kill-session -t"
 
@@ -21,6 +19,7 @@ alias ga="ga ."
 alias gbc='git checkout -b'
 alias gd="git diff | vim -"
 alias gdc="git diff --cached | vim -"
+alias gsync="git fetch upstream && git rebase upstream/develop && git push"
 
 # Rails
 alias bi="bundle install"
@@ -31,6 +30,8 @@ alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 alias db="docker-compose build"
 alias du="docker-compose up"
 alias dd="docker-compose down"
+
+alias cpkey="cat ~/.ssh/id_rsa.pub | pbcopy"
 
 # ;)
 alias dcss="ssh joshua@crawl.akrasiac.org" # pass: joshua
