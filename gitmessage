@@ -9,3 +9,12 @@
 # * Are there any side effects?
 #
 # Include a link to the ticket, if any.
+#
+# ### Example
+#
+# Added the abilithy to add star ratings
+#
+# This has been requested by many users.
+# Changes the database to make the change and serves it up to the API.
+#
+# Closes #42
