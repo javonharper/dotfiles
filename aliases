@@ -13,6 +13,11 @@ alias tds="tmux detach"
 alias tls="tmux list-sessions"
 alias tks="tmux kill-session -t"
 
+# Tmuxinator
+alias hud='mux start hud'
+alias gql='mux start graphql-api'
+alias kwanzaa='mux start kwanzaa'
+
 # Git
 alias gs="git status"
 alias ga="ga ."
