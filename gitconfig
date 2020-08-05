@@ -1,6 +1,6 @@
 [user]
-  name = Javon Harper
-  email = javon.d.harper@gmail.com
+	name = Javon Harper
+	email = javon.d.harper@gmail.com
 
 [alias]
   conflicts = diff --name-only --diff-filter=U
@@ -19,3 +19,8 @@
 
 [push]
 	default = current
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

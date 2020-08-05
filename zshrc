@@ -24,3 +24,7 @@ source $ZSH/oh-my-zsh.sh
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/javon/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/javon/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/javon/.config/yarn/global/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/javon/.config/yarn/global/node_modules/tabtab/.completions/slss.zsh
