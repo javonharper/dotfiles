@@ -14,9 +14,7 @@ alias tls="tmux list-sessions"
 alias tks="tmux kill-session -t"
 
 # Tmuxinator
-alias hud='mux start hud'
-alias gql='mux start graphql-api'
-alias kwanzaa='mux start kwanzaa'
+alias overworld='mux start overworld4x'
 
 # Git
 alias gs="git status"
@@ -32,13 +30,8 @@ alias bi="bundle install"
 alias bu="bundle update"
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 
-# Docker-compose
-alias db="docker-compose build"
-alias du="docker-compose up"
-alias dd="docker-compose down"
-
-alias cpkey="cat ~/.ssh/id_rsa.pub | pbcopy"
-
 # ;)
 alias dcss="ssh joshua@crawl.akrasiac.org" # pass: joshua
 alias editlic="vim ~/Library/Application\ Support/com.ynab.YNAB4.LiveCaptive/Local\ Store/.lic"
+alias ytdl="youtube-dl -x --audio-format mp3"
+alias dl="spotdl"

@@ -11,6 +11,8 @@ ln -sf $PWD/gitconfig $HOME/.gitconfig
 ln -sf $PWD/gitmessage $HOME/.gitmessage
 ln -sf $PWD/gitignore $HOME/.gitignore_global
 
+ln -sf $PWD/dl /bin/dl
+
 # vim config
 ln -sf $PWD/vimrc $HOME/.vimrc
 ln -sf $PWD/gvimrc $HOME/.gvimrc
