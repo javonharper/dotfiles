@@ -1,0 +1,173 @@
+{
+	"name": "Fortress",
+	"type": "light",
+	"colors": {
+		"editor.background": "#f5f5f5",
+		"editor.foreground": "#333333",
+		"list.activeSelectionIconForeground": "#fff"
+	},
+	"tokenColors": [
+		{
+			"name": "Comments",
+			"scope": [
+				"comment",
+			],
+			"settings": {
+				"foreground": "#AAAAAA"
+			},
+		},
+		{
+			"name": "Quotes",
+			"scope": [
+				"string.quoted",
+				"string.template"
+			],
+			"settings": {
+				"foreground": "#0090c9"
+			},
+		},
+		{
+			"name": "Constants obo Numbers",
+			"scope": [
+				"constant",
+			],
+			"settings": {
+				"foreground": "#0090c9"
+			},
+		},
+		{
+			"name": "Variable",
+			"scope": [
+				"storage",
+			],
+			"settings": {
+				"fontStyle": "bold"
+			},
+		},
+		{
+			"name": "Support obo require/module/exports",
+			"scope": [
+				"support",
+				"keyword"
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#666"
+			},
+		},
+		{
+			"name": "Braces",
+			"scope": [
+				"meta.brace",
+			],
+			"settings": {
+				"fontStyle": "bold"
+			},
+		},
+		{
+			"name": "Operators",
+			"scope": [
+				"keyword.operator",
+			],
+			"settings": {
+				"foreground": "#333",
+				"fontStyle": "bold"
+			},
+		},
+
+
+		{
+			"name": "Tag",
+			"scope": [
+				"support.class.component",
+			],
+			"settings": {
+				"foreground": "#000000"
+			},
+		},
+
+
+
+		{
+			"name": "Tag Attribute name",
+			"scope": [
+				"entity.other.attribute-name",
+			],
+			"settings": {
+				"foreground": "#002c8a"
+			},
+		},
+
+
+
+		{
+			"name": "Braces for JSX Variables",
+			"scope": [
+				"punctuation.section.embedded",
+			],
+			"settings": {
+				"foreground": "#0090c9"
+			},
+		},
+
+
+
+		{
+			"name": "Template-DO-NOT-DELETE",
+			"scope": [
+				"paste_scope_here",
+			],
+			"settings": {
+				"foreground": "#FF00FF"
+			},
+		},
+
+
+
+
+		{
+			"name": "Template-DO-NOT-DELETE",
+			"scope": [
+				"paste_scope_here",
+			],
+			"settings": {
+				"foreground": "#FF00FF"
+			},
+		},
+
+
+
+
+		{
+			"name": "Template-DO-NOT-DELETE",
+			"scope": [
+				"paste_scope_here",
+			],
+			"settings": {
+				"foreground": "#FF00FF"
+			},
+		},
+
+
+
+
+
+
+
+
+
+
+
+
+
+		{
+			"name": "Template-DO-NOT-DELETE",
+			"scope": [
+				"paste_scope_here",
+			],
+			"settings": {
+				"foreground": "#FF00FF"
+			},
+		},
+	]
+}
