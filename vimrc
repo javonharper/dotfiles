@@ -26,7 +26,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tmhedberg/matchit'
 
 " Autocomplete
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 "" Syntax
 Plugin 'leafgarland/typescript-vim'

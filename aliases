@@ -19,10 +19,8 @@ alias overworld='mux start overworld4x'
 # Git
 alias gs="git status"
 alias ga="ga ."
-alias gbc='git checkout -b'
-alias gd="git diff | vim -"
-alias gdc="git diff --cached | vim -"
-alias gcob="git checkout -b"
+alias gd="git diff"
+alias gdc="git diff --cached"
 alias gsync="git fetch upstream && git rebase upstream/develop && git push"
 
 # Rails

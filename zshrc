@@ -1,3 +1,4 @@
+export ZSH_DISABLE_COMPFIX=true
 export EDITOR=vim
 export ZSH="/Users/javon/.oh-my-zsh"
 
@@ -5,6 +6,8 @@ ZSH_THEME="minimal"
 
 plugins=(
   git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 if [[ -a ~/.aliases ]]
@@ -28,3 +31,16 @@ source $ZSH/oh-my-zsh.sh
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /Users/javon/.config/yarn/global/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/javon/.config/yarn/global/node_modules/tabtab/.completions/slss.zsh
+
+# Created by `pipx` on 2021-03-25 20:55:02
+export PATH="$PATH:/Users/javon/Library/Python/3.8/bin"
+
+# Created by `pipx` on 2021-03-25 20:55:02
+export PATH="$PATH:/Users/javon/.local/bin"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/javon/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/javon/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/javon/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/javon/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH=$HOME/bin:$PATH
