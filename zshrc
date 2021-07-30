@@ -28,3 +28,6 @@ source $ZSH/oh-my-zsh.sh
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [[ -f /Users/javon/.config/yarn/global/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/javon/.config/yarn/global/node_modules/tabtab/.completions/slss.zsh
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
