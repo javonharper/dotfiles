@@ -24,9 +24,9 @@ alias gdc="git diff --cached"
 alias gsync="git fetch upstream && git rebase upstream/develop && git push"
 
 # Rails
-alias bi="bundle install"
-alias bu="bundle update"
-alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
+# alias bi="bundle install"
+# alias bu="bundle update"
+# alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 
 # ;)
 alias dcss="ssh joshua@crawl.akrasiac.org" # pass: joshua
