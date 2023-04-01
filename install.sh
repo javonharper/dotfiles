@@ -10,8 +10,8 @@ ln -sf $PWD/zshrc.global $HOME/.zshrc.global
 FILE=~/.zshrc.local
 
 if [ ! -f "$FILE" ]; then
-    cp ~/zshrc.local ~/.zshrc.local
-    echo "Copied template.zshrc.local to ~/.zshrc.local"
+    cp zshrc.local ~/.zshrc.local
+    echo "Copied zshrc.local to ~/.zshrc.local"
 else
     echo "$FILE already exists. Skipping..."
 fi
@@ -27,6 +27,7 @@ ln -sf $PWD/gitignore.global $HOME/.gitignore.global
 # ln -sf $PWD/vimrc $HOME/.vimrc
 
 # git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # vim +PluginInstall +qall
 
