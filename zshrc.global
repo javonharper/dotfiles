@@ -1,5 +1,5 @@
 # This file is intentionally left blank
 # Add general purpose configuration 
-echo "Running zshrc.global..."
+# echo "Running zshrc.global..."
 
 export EDITOR=vim

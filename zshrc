@@ -1,4 +1,4 @@
-echo "Running zshrc..."
+# echo "Running zshrc..."
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -7,10 +7,11 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="random"
+ZSH_THEME="robbyrussell"
 
 plugins=(
     git
+    z
     zsh-autosuggestions
 )
 
