@@ -21,3 +21,6 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.aliases ] && source ~/.aliases
 [ -f ~/.zshrc.global ] && source ~/.zshrc.global
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+# Created by `pipx` on 2023-05-04 01:01:56
+export PATH="$PATH:/Users/javon/.local/bin"

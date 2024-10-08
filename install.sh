@@ -24,11 +24,7 @@ ln -sf $PWD/gitmessage $HOME/.gitmessage
 ln -sf $PWD/gitignore.global $HOME/.gitignore.global
 
 # vim config
-# ln -sf $PWD/vimrc $HOME/.vimrc
+ln -sf $PWD/init.lua $HOME/.config/nvim/init.lua
 
-# git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-# vim +PluginInstall +qall
 
 echo "Done."

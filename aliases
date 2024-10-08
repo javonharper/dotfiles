@@ -4,6 +4,7 @@ alias cp="cp -r"
 alias rm="trash"
 alias mkdir="mkdir -p"
 alias tree="tree -I 'node_modules|cache|test_*'"
+alias vim='nvim'
 
 # Tmux
 alias mux='tmuxinator'
@@ -32,4 +33,5 @@ alias gsync="git fetch upstream && git rebase upstream/develop && git push"
 alias dcss="ssh joshua@crawl.akrasiac.org" # pass: joshua
 alias editlic="vim ~/Library/Application\ Support/com.ynab.YNAB4.LiveCaptive/Local\ Store/.lic"
 alias ytdl="youtube-dl -x --audio-format mp3"
-alias dl="spotdl"
+alias y="pipx run yt-dlp"
+alias dl="mkdir ~/Downloads/Music && cd ~/Downloads/Music && pipx run spotdl"
