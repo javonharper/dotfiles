@@ -4,6 +4,4 @@
 
 *.log
 
-env.sh
-
 .vscode
