@@ -1,26 +1,20 @@
 [user]
-	name = Javon Harper
+    name = Javon Harper
 	email = javon.d.harper@gmail.com
 
 [alias]
-  conflicts = diff --name-only --diff-filter=U
-  remove = push --delete origin
+    conflicts = diff --name-only --diff-filter=U
+    remove = push --delete origin
 
 [color]
 	ui = auto
 
 [commit]
-  template = ~/.gitmessage
-	# gpgsign = true
+    template = ~/.gitmessage
 
 [core]
-  editor = vim 
-	excludesfile = /Users/javon/.gitignore_global
+    editor = vim 
+    excludesfile = /Users/javon/.gitignore.global
 
 [push]
-	default = current
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    default = current

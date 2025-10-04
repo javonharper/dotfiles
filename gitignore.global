@@ -1,7 +1,11 @@
-.DS_Store
+ Build directories
+build/ bin/
 
-*.sw?
+# IDE
+.vscode/ .DS_Store *.sw?
 
-*.log
+# Log files
+*.log 
 
-.vscode
+# Config files
+.env .env.local
