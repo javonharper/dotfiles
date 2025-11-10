@@ -66,6 +66,14 @@ else
     brew install tmux
 fi
 
+# Install tmuxinator
+if command -v tmuxinator &> /dev/null; then
+    echo "Skipping tmuxinator.  Already installed."
+else
+    echo "Installing tmuxinator..."
+    brew install tmuxinator
+fi
+
 # Install Neovim
 if command -v nvim &> /dev/null; then
     echo "Skipping Neovim.  Already installed."

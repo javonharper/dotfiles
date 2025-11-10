@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# Destination inside iCloud Drive
-DEST="$HOME/Library/Mobile Documents/com~apple~CloudDocs/Podcasts"
+DEST="$HOME/Documents/Media/Podcasts/"
 mkdir -p "$DEST"
 
 ARTIST=""
@@ -38,8 +37,12 @@ fi
 
 # If no artist provided, fetch channel name from yt-dlp
 if [[ -z "$ARTIST" ]]; then
-  ARTIST=$(pipx run yt-dlp --get-filename -o "%(uploader)s" "$URL")
+  ARTIST=$(yt-dlp --get-filename -o "%(uploader)s" "$URL")
 fi
+
+# Create channel-specific directory
+CHANNEL_DIR="$DEST/$ARTIST"
+mkdir -p "$CHANNEL_DIR"
 
 # Build ffmpeg metadata args
 META_ARGS=()
@@ -56,10 +59,9 @@ if [[ -n "$MAX_DURATION" ]]; then
   SECTIONS="--download-sections *0-$SECONDS"
 fi
 
-# Run yt-dlp through pipx
-pipx run yt-dlp -f bestaudio --extract-audio --audio-format m4a \
+yt-dlp -f bestaudio --extract-audio --audio-format m4a \
   --audio-quality 0 \
   --postprocessor-args "ffmpeg:$JOINED" \
-  -o "$DEST/%(title)s.%(ext)s" \
+  -o "$CHANNEL_DIR/%(title)s.%(ext)s" \
   $SECTIONS \
   "$URL"

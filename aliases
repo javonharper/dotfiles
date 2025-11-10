@@ -24,4 +24,12 @@ alias gdc="git diff --cached"
 alias dcss="ssh joshua@crawl.akrasiac.org" # pass: joshua
 alias editlic="vim ~/Library/Application\ Support/com.ynab.YNAB4.LiveCaptive/Local\ Store/.lic"
 alias y="pipx run yt-dlp"
+alias p="podcast"
 alias dl="mkdir ~/Downloads/Music && cd ~/Downloads/Music && pipx run spotdl"
+
+
+
+
+iterm() {
+ open -a iTerm "$*"
+}

@@ -10,11 +10,17 @@ ZSH_THEME="robbyrussell"
 plugins=(
     git
     z
+#     zsh-autosuggestions
+    # zsh-autocomplete
 )
 
 source $ZSH/oh-my-zsh.sh
 
-
-[ -f ~/.aliases ] && source ~/.aliases
 [ -f ~/.zshrc.global ] && source ~/.zshrc.global
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+[ -f ~/.aliases ] && source ~/.aliases
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+. "/Users/javon/.deno/env"
