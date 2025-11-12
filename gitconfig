@@ -1,20 +1,17 @@
 [user]
     name = Javon Harper
 	email = javon.d.harper@gmail.com
-
 [alias]
     conflicts = diff --name-only --diff-filter=U
     remove = push --delete origin
-
 [color]
 	ui = auto
-
 [commit]
     template = ~/.gitmessage
-
 [core]
     editor = vim 
-    excludesfile = /Users/javon/.gitignore.global
-
+    excludesfile = ~/.gitignore.global
 [push]
     default = current
+[branch]
+	autoSetupMerge = always

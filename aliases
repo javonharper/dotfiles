@@ -20,6 +20,10 @@ alias ga="ga ."
 alias gd="git diff"
 alias gdc="git diff --cached"
 
+# Change browser
+alias f="browser -f"
+alias c="browser -c"
+
 # ;)
 alias dcss="ssh joshua@crawl.akrasiac.org" # pass: joshua
 alias editlic="vim ~/Library/Application\ Support/com.ynab.YNAB4.LiveCaptive/Local\ Store/.lic"

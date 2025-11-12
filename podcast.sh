@@ -40,14 +40,22 @@ if [[ -z "$ARTIST" ]]; then
   ARTIST=$(yt-dlp --get-filename -o "%(uploader)s" "$URL")
 fi
 
+
 # Create channel-specific directory
 CHANNEL_DIR="$DEST/$ARTIST"
 mkdir -p "$CHANNEL_DIR"
+
+TITLE=$(yt-dlp --get-filename -o "%(title)s" "$URL")
+DESCR=$(yt-dlp --get-description "$URL")
+# Capture current time as  YYYY-MM-DDThh:mm:ssZ
+TIME=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 
 # Build ffmpeg metadata args
 META_ARGS=()
 META_ARGS+=("-metadata" "artist=$ARTIST")
 META_ARGS+=("-metadata" "album=$ALBUM")
+META_ARGS+=("-metadata" "title=$TITLE")
+META_ARGS+=("-metadata" "RELEASETIME=$TIME")
 
 # Convert array to string for yt-dlp
 JOINED=$(printf ' %q' "${META_ARGS[@]}")
